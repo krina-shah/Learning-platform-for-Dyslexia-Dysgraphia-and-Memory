@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Learning</title>
+
+        
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- <link href="{{ url_for('static', filename='css/mystyledash.css') }}"> -->
+        
+        <link rel="stylesheet" href="style.css">
+        <style type="text/css">
+            /*
+    DEMO STYLE
+*/
+/*@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";*/
+
+
+body {
+    /*font-family: 'Pacifico', cursive;*/
+    background-color: rgba(254, 198, 21,0.2)!important;
+}
+h4{
+    color: white;
+}
+h2{
+    font-size: 20px;
+}
+p {
+   /*font-family: 'Pacifico', cursive;*/
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: black;
+}
+h4{
+    color: black
+    font: none !important;
+}
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+   
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+i, span {
+    display: inline-block;
+}
+
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: black;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+}
+
+#sidebar.active .sidebar-header h3, #sidebar.active .CTAs {
+    display: none;
+}
+
+#sidebar.active .sidebar-header strong {
+    display: block;
+}
+
+#sidebar ul li a {
+    text-align: left;
+}
+
+#sidebar.active ul li a {
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+#sidebar.active ul li a i {
+    margin-right:  0;
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+#sidebar.active ul ul a {
+    padding: 10px !important;
+}
+
+#sidebar.active a[aria-expanded="false"]::before, #sidebar.active a[aria-expanded="true"]::before {
+    top: auto;
+    bottom: 5px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: black;
+}
+
+#sidebar .sidebar-header strong {
+    display: none;
+    font-size: 1.8em;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color:pink;
+    background: #fff;
+}
+#sidebar ul li a i {
+    margin-right: 10px;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: pink;
+}
+
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: black;
+}
+
+/*ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}*/
+
+/*a.download {
+    background: #fff;
+    color: #7386D5;
+}*/
+
+/*a.article, a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}*/
+
+
+#score{
+    width: 23px;
+    height: 23px;
+    border: none !important ;
+}
+#strength{
+    width: 280px;
+    height: 30px;
+    border: none !important ;
+}
+#weakness{
+    width: 280px;
+    height: 30px;
+    border: none !important ;
+}
+#content {
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+
+
+@media (max-width: 768px) {
+    #sidebar {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important ;
+    }
+    a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+        top: auto;
+        bottom: 5px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+    #sidebar.active {
+        margin-left: 0 !important;
+    }
+
+    #sidebar .sidebar-header h3, #sidebar .CTAs {
+        display: none;
+    }
+
+    #sidebar .sidebar-header strong {
+        display: block;
+    }
+
+    #sidebar ul li a {
+        padding: 20px 10px;
+    }
+
+    #sidebar ul li a span {
+        font-size: 0.85em;
+    }
+    #sidebar ul li a i {
+        margin-right:  0;
+        display: block;
+    }
+
+    #sidebar ul ul a {
+        padding: 10px !important;
+    }
+
+    #sidebar ul li a i {
+        font-size: 1.3em;
+    }
+    #sidebar {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+        </style>
+    </head>
+    <body>
+
+
+
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Learning</h3>
+                    <strong><img src="{{ url_for('static', filename='img/logo.png') }}" style="height: 40px"></strong>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#homeSubmenu"  aria-expanded="false">
+                            <i class="glyphicon glyphicon-home"></i>
+                            Profile Page
+                        </a>
+                        
+                    </li>
+            
+                    
+                    <li>
+                        <a href="#Student" >
+                            <i class="glyphicon glyphicon-send"></i>
+                            Student Details
+                        </a>
+                    </li>
+                </ul>
+
+                
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="glyphicon glyphicon-align-justify"></i>
+                                <span></span>
+                            </button>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <!-- <li><a href="#">Page</a></li>
+                                <li><a href="#">Page</a></li>
+                                <li><a href="#">Page</a></li> -->
+                                <li><a><h4>
+                                Welcome</a></h4>
+                                <p> <h4><a href="{{(url_for('logout'))}}"  class="link" id="session">LOGOUT</a></h4> </p></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+                <div class="jumbotron">
+                 <div class="container-fluid">
+    <div class="row"><br><br><br>
+      <div class="form1">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="100">
+        
+        
+               <center><h3>Profile Page</h3> 
+
+    <h2>Your account details are below:</h2>
+
+    <table>
+        <tr>
+            <td><h2>Username:</h2></td>
+            <td><h2>{{ data[1] }}</h2></td>
+        </tr>
+        <tr>
+            <td><h2>Password:</h2></td>
+            <td><h2>{{ data[4] }}</h2></td>
+        </tr>
+        <tr>
+            <td><h2>Email:</h2></td>
+            <td><h2>{{ data[2] }}</h2></td>
+        </tr>
+    </table>
+</center>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jumbotron ">
+<div class="container-fluid" id="Student">
+    <div class="row"><br><br><br>
+      <div class="form1">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " data-aos="fade-up" data-aos-delay="100">
+        
+       
+        <center><h3>Student Details</h3>
+
+    <h2>Your student details are below:</h2>
+        </center>
+    <table>
+        <tr>
+            <td><h2>Username:</h2></td>
+            <td><h2>{{ data1[0] }}</h2></td>
+        </tr>
+        
+        
+        <tr>    
+            <td><h2>Student Score is : &nbsp;&nbsp;</h2></td>
+            <td><h2><input type="text"  id="score" disabled>/ 8</h2></td>
+        </tr>
+        <tr>    
+            <td><h2>Student Strength is : &nbsp;&nbsp;</h2></td>
+            <td><h2><input type="text"  id="strength" disabled></h2></td>
+        </tr>
+        <tr>    
+            <td><h2>Student Weakness is : &nbsp;&nbsp;</h2></td>
+            <td><h2><input type="text"  id="weakness" disabled></h2></td>
+        </tr>
+        </table>
+        <br>
+        <center><button class=" btn btn-lg" onclick="studentscore()" id="getscore"> Get Score </button></center>    
+        
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+               <!--  <h2>Collapsible Sidebar Using Bootstrap 3</h2> -->
+               <!--  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+
+                <!-- <div class="line"></div>
+
+                <h2>Lorem Ipsum Dolor</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <div class="line"></div>
+
+                <h2>Lorem Ipsum Dolor</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <div class="line"></div>
+
+                <h3>Lorem Ipsum Dolor</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div> -->
+        <!-- </div> -->
+
+
+
+
+
+         <script src="{{ url_for('static',     filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/bootstrap.min.js') }}"></script>
+    {% block content %}
+    {% endblock %}
+
+         <script type="text/javascript">
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+         </script>
+
+         <script type="text/javascript">
+         function studentscore() {
+            var x1 = "{{data1[1]}}";
+            var x2 = "{{data1[2]}}";
+            var x3 = "{{data1[3]}}";
+            var x4 = "{{data1[4]}}";
+            var x5 = "{{data1[5]}}";
+            var x6 = "{{data1[6]}}";
+            var x7 = "{{data1[7]}}";
+            var x8 = "{{data1[8]}}";
+            var dataset=[x1,x2,x3,x4,x5,x6,x7,x8];
+            // alert(dataset);
+            var count = 0;
+            for (i = 0; i < 8 ; i++) { 
+                if(dataset[i]=="correct"){
+                    count = count+1;
+                }
+            }
+            document.getElementById("score").value= count;
+            var spell = [x1,x2,x3];
+            var mem = [x4,x5];
+            var read = [x6,x7,x8];
+            var spellcount=0;
+            var readcount=0;
+            var memcount=0;
+            
+            for(i=0 ; i<3 ; i++){
+                if(spell[i]=="correct"){
+                    spellcount = spellcount+1;
+                }
+                
+            }
+            if(spellcount == 3){
+                document.getElementById("strength").value += " Spelling";
+                
+                }
+            for(i=0 ; i<2 ; i++){
+                if(mem[i]=="correct"){
+                   memcount = memcount+1;
+                }
+                
+            }
+            if( memcount == 2){
+                document.getElementById("strength").value += ", Memory";
+            }
+            for(i=0 ; i<3 ; i++){
+                if(read[i]=="correct"){
+                   readcount = readcount+1;
+                }
+                
+            }
+            if( readcount == 3){
+                document.getElementById("strength").value += ", Reading";
+            }
+            
+           
+           if(spellcount <= 2){
+                document.getElementById("weakness").value="Spelling";
+            }
+            else if( memcount < 2){
+                document.getElementById("weakness").value +="Memory";
+            }
+            else if( readcount <= 2){
+                document.getElementById("weakness").value +=" Reading";
+            }
+            document.getElementById("getscore").disabled = true;
+         } 
+        </script>
+    </body>
+</html>

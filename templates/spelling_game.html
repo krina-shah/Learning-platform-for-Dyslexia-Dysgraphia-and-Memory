@@ -1,0 +1,2831 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Learning</title>
+   <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- <link href="{{ url_for('static', filename='css/mycss.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Acme|Englebert|Jua|Pattaya');
+        @import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+      @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script&display=swap');
+       @import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+      main{
+  
+  height:auto;
+  max-height: 2200px; 
+  width: 100%;
+  
+  max-width:1570px;
+  
+
+}
+#home{
+  width: 100%;
+  height: 900px;
+  background-color: rgba(254, 198, 21,0.2)!important;
+  position: relative;
+  
+  
+
+  
+}
+#logo{
+height:35px;
+width:40px;
+position:relative;
+top:-7px;
+left:10px;
+}
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(227,158,89,0.2); 
+  color: black;
+  text-align: center;
+ border-style: none !important;
+}
+      .bg1{
+        
+        width:70%;
+        height: auto;
+        margin: auto;
+        text-align: center;
+        /*background: linear-gradient(to bottom, rgba(0,50,150,0.4), rgba(0,0,30,0.3));*/
+         background-color: white;
+        /*background-size: cover;*/
+        border-radius: 20px;
+        /*border: solid;*/
+        /*border-color: red;*/
+        -webkit-box-shadow:-5px 2px 62px 8px rgba(0,0,0,0.85);
+      -moz-box-shadow:-5px 2px 62px 8px rgba(0,0,0,0.85);
+      box-shadow:-5px 2px 62px 8px rgba(0,0,0,0.85);
+      }
+      .btnClick{
+        width: 40px;
+        height: 40px;
+         /*-webkit-box-shadow:-5px 2px 62px 8px rgba(0,0,0,0.85);
+      -moz-box-shadow:-5px 2px 62px 8px rgba(0,0,0,0.85);
+      box-shadow:-5px 2px 62px 8px rgba(0,0,0,0.85);*/
+      color: black;
+      /*font-family: 'Courgette', sans-serif;*/
+      font-size: 20px;
+     
+      }
+      h5{
+        color: black;
+      /*font-family: 'Courgette', sans-serif;*/
+      
+      font-size: 20px;
+      }
+      .btn-info{
+        color: black !important;
+        font-size: 20px !important;
+      }
+
+    </style>
+    </head>
+  <body>
+    <main><nav  class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="#">
+<img  id="logo" src="{{ url_for('static', filename='img/logo.png') }}" >
+</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a  id="help">Welcome</a></li>
+      </ul>
+<div>
+<div>
+</nav>
+      <section  id="home" class="container-fluid " data-aos="fade-left" data-aos-delay="100">
+
+  <div class="container-fluid">
+    <div class="row">
+      <br><br>
+      <div class="bg1">
+
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100">
+        <h1>Spelling Training.</h1>
+        <br>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:block;" id="alpha">
+
+        <h5>Click on any alphabet.</h5>
+        <br>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedA()">A</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedB()">B</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedC()">C</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedD()">D</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedE()">E</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedF()">F</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedG()">G</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedH()">H</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedI()">I</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedJ()">J</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedK()">K</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedL()">L</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedM()">M</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedN()">N</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedO()">O</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedP()">P</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedQ()">Q</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedR()">R</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedS()">S</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedT()">T</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedU()">U</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedV()">V</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedW()">W</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedX()">X</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedY()">Y</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+          <button type="button" class="btn btn-success btn-sm btnClick" onclick="clickedZ()">Z</button>&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+        <!-- ALPHABET A -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="A">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textA()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="A1">
+          <h1 id="text"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="A1">
+          <img id="image" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="A1">
+          <h1 id="text1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="A1">
+          <img id="image1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="A1">
+          <h1 id="text2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="A1">
+          <img id="image2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="button">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textAfinish()">Next</button>
+        </div>
+      </div>
+
+      <!-- ALPHABET B -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="B">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textB()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="B1">
+          <h1 id="textb"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="B1">
+          <img id="imageb" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="B1">
+          <h1 id="textb1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="B1">
+          <img id="imageb1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="B1">
+          <h1 id="textb2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="B1">
+          <img id="imageb2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonB">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textBfinish()">Next</button>
+        </div>
+      </div>
+
+
+      <!-- ALPHABET C -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="C">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textC()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="C1">
+          <h1 id="textc"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="C1">
+          <img id="imagec" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="C1">
+          <h1 id="textc1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="C1">
+          <img id="imagec1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="C1">
+          <h1 id="textc2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="C1">
+          <img id="imagec2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonC">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textCfinish()">Next</button>
+        </div>
+      </div>
+
+<!-- ALPHABET D -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="D">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textD()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="D1">
+          <h1 id="textd"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="D1">
+          <img id="imaged" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="D1">
+          <h1 id="textd1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="D1">
+          <img id="imaged1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="D1">
+          <h1 id="textd2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="D1">
+          <img id="imaged2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonD">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textDfinish()">Next</button>
+        </div>
+      </div>
+
+<!-- ALPHABET E -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="E">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textE()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="E1">
+          <h1 id="texte"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="E1">
+          <img id="imagee" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="E1">
+          <h1 id="texte1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="E1">
+          <img id="imagee1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="E1">
+          <h1 id="texte2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="E1">
+          <img id="imagee2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonE">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textEfinish()">Next</button>
+        </div>
+      </div>
+
+<!-- ALPHABET F -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="F">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textF()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="F1">
+          <h1 id="textf"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="F1">
+          <img id="imagef" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="F1">
+          <h1 id="textf1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="F1">
+          <img id="imagef1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="F1">
+          <h1 id="textf2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="F1">
+          <img id="imagef2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonF">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textFfinish()">Next</button>
+        </div>
+      </div>      
+
+<!-- ALPHABET G -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="G">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textG()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="G1">
+          <h1 id="textg"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="G1">
+          <img id="imageg" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="G1">
+          <h1 id="textg1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="G1">
+          <img id="imageg1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="G1">
+          <h1 id="textg2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="G1">
+          <img id="imageg2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonG">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textGfinish()">Next</button>
+        </div>
+      </div> 
+
+<!-- ALPHABET H -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="H">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textH()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="H1">
+          <h1 id="texth"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="H1">
+          <img id="imageh" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="H1">
+          <h1 id="texth1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="H1">
+          <img id="imageh1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="H1">
+          <h1 id="texth2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="H1">
+          <img id="imageh2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonH">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textHfinish()">Next</button>
+        </div>
+      </div> 
+
+      <!-- ALPHABET I -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="I">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textI()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="I1">
+          <h1 id="texti"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="I1">
+          <img id="imagei" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="I1">
+          <h1 id="texti1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="I1">
+          <img id="imagei1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="I1">
+          <h1 id="texti2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="I1">
+          <img id="imagei2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonI">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textIfinish()">Next</button>
+        </div>
+      </div> 
+
+<!-- ALPHABET J -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="J">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textJ()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="J1">
+          <h1 id="textj"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="J1">
+          <img id="imagej" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="J1">
+          <h1 id="textj1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="J1">
+          <img id="imagej1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="J1">
+          <h1 id="textj2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="J1">
+          <img id="imagej2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonJ">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textJfinish()">Next</button>
+        </div>
+      </div> 
+
+      <!-- ALPHABET K -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="K">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textK()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="K1">
+          <h1 id="textk"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="K1">
+          <img id="imagek" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="K1">
+          <h1 id="textk1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="K1">
+          <img id="imagek1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="K1">
+          <h1 id="textk2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="K1">
+          <img id="imagek2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonK">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textKfinish()">Next</button>
+        </div>
+      </div> 
+
+      <!-- ALPHABET L -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="L">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textL()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="L1">
+          <h1 id="textl"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="L1">
+          <img id="imagel" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="L1">
+          <h1 id="textl1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="L1">
+          <img id="imagel1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="L1">
+          <h1 id="textl2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="L1">
+          <img id="imagel2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonL">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textLfinish()">Next</button>
+        </div>
+      </div> 
+
+<!-- ALPHABET M -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="M">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textM()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="M1">
+          <h1 id="textm"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="M1">
+          <img id="imagem" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="M1">
+          <h1 id="textm1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="M1">
+          <img id="imagem1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="M1">
+          <h1 id="textm2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="M1">
+          <img id="imagem2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonM">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textMfinish()">Next</button>
+        </div>
+      </div> 
+    </div>
+    
+    <!-- ALPHABET N -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="N">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textN()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="N1">
+          <h1 id="textn"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="N1">
+          <img id="imagen" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="N1">
+          <h1 id="textn1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="N1">
+          <img id="imagen1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="N1">
+          <h1 id="textn2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="N1">
+          <img id="imagen2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonN">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textNfinish()">Next</button>
+        </div>
+      </div> 
+    </div>
+    
+    <!-- ALPHABET O -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="O">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textO()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="O1">
+          <h1 id="texto"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="O1">
+          <img id="imageo" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="O1">
+          <h1 id="texto1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="O1">
+          <img id="imageo1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="O1">
+          <h1 id="texto2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="O1">
+          <img id="imageo2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonO">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textOfinish()">Next</button>
+        </div>
+      </div> 
+
+<!-- ALPHABET P -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="P">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textP()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="P1">
+          <h1 id="textp"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="P1">
+          <img id="imagep" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="P1">
+          <h1 id="textp1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="P1">
+          <img id="imagep1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="P1">
+          <h1 id="textp2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="P1">
+          <img id="imagep2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonP">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textPfinish()">Next</button>
+        </div>
+      </div> 
+
+<!-- ALPHABET Q -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="Q">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textQ()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Q1">
+          <h1 id="textq"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Q1">
+          <img id="imageq" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Q1">
+          <h1 id="textq1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Q1">
+          <img id="imageq1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Q1">
+          <h1 id="textq2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Q1">
+          <img id="imageq2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonQ">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textQfinish()">Next</button>
+        </div>
+      </div> 
+
+      <!-- ALPHABET R -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="R">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textR()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="R1">
+          <h1 id="textr"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="R1">
+          <img id="imager" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="R1">
+          <h1 id="textr1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="R1">
+          <img id="imager1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="R1">
+          <h1 id="textr2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="R1">
+          <img id="imager2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonR">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textRfinish()">Next</button>
+        </div>
+      </div> 
+
+<!-- ALPHABET S -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="S">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textS()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="S1">
+          <h1 id="texts"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="S1">
+          <img id="images" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="S1">
+          <h1 id="texts1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="S1">
+          <img id="images1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="S1">
+          <h1 id="texts2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="S1">
+          <img id="images2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonS">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textSfinish()">Next</button>
+        </div>
+      </div> 
+
+<!-- ALPHABET T -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="T">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textT()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="T1">
+          <h1 id="textt"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="T1">
+          <img id="imaget" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="T1">
+          <h1 id="textt1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="T1">
+          <img id="imaget1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="T1">
+          <h1 id="textt2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="T1">
+          <img id="imaget2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonT">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textTfinish()">Next</button>
+        </div>
+      </div> 
+<!-- ALPHABET U -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="U">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textU()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="U1">
+          <h1 id="textu"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="U1">
+          <img id="imageu" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="U1">
+          <h1 id="textu1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="U1">
+          <img id="imageu1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="U1">
+          <h1 id="textu2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="U1">
+          <img id="imageu2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonU">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textUfinish()">Next</button>
+        </div>
+      </div> 
+<!-- ALPHABET V -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="V">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textV()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="V1">
+          <h1 id="textv"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="V1">
+          <img id="imagev" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="V1">
+          <h1 id="textv1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="V1">
+          <img id="imagev1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="V1">
+          <h1 id="textv2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="V1">
+          <img id="imagev2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonV">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textVfinish()">Next</button>
+        </div>
+      </div> 
+<!-- ALPHABET W -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="W">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textW()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="W1">
+          <h1 id="textw"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="W1">
+          <img id="imagew" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="W1">
+          <h1 id="textw1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="W1">
+          <img id="imagew1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="W1">
+          <h1 id="textw2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="W1">
+          <img id="imagew2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonW">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textWfinish()">Next</button>
+        </div>
+      </div> 
+      <!-- ALPHABET X -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="X">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textX()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="X1">
+          <h1 id="textx"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="X1">
+          <img id="imagex" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="X1">
+          <h1 id="textx1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="X1">
+          <img id="imagex1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="X1">
+          <h1 id="textx2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="X1">
+          <img id="imagex2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonX">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textXfinish()">Next</button>
+        </div>
+      </div> 
+
+ <!-- ALPHABET Y -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="Y">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textY()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Y1">
+          <h1 id="texty"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Y1">
+          <img id="imagey" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Y1">
+          <h1 id="texty1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Y1">
+          <img id="imagey1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Y1">
+          <h1 id="texty2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Y1">
+          <img id="imagey2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonY">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textYfinish()">Next</button>
+        </div>
+      </div> 
+
+<!-- ALPHABET Z -->
+        <div >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display:none;" id="Z">
+        <h5>Click the button below to start.</h5>
+        <button type="button" class="btn btn-info btn-sm" onclick="textZ()">Click me</button>
+        <br><br><br>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Z1">
+          <h1 id="textz"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Z1">
+          <img id="imagez" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Z1">
+          <h1 id="textz1"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Z1">
+          <img id="imagez1" style="width: 100px; height: 100px; display:none;" >
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Z1">
+          <h1 id="textz2"></h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="Z1">
+          <img id="imagez2" style="width: 100px; height: 100px; display:none;" >
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none;" id="buttonZ">
+          <br><br>
+          <button type="button" class="btn btn-info btn-sm" onclick="textZfinish()">Next</button>
+        </div>
+      </div> 
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+</section>
+  
+<section id="footer">
+  <div class="footer">
+  <p>CopyRight All Rights Reserved</p>
+</div>
+</section>
+</main>
+
+   <script src="{{ url_for('static',     filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/aos.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/main.js') }}"></script>
+
+{% block content %}
+    {% endblock %}
+
+<!--  ALPHABET A -->   
+<script type="text/javascript">
+  function clickedA(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('A').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textA(){
+ document.getElementById("text").innerHTML="Apple";
+ var inputmsg="A.. P.. P.. L.. e....... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Apple";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('image').style.display='block';
+ document.getElementById("image").src = "{{ url_for('static', filename='img/apple.png') }}"}, 1000 ) ;
+textA1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textA1(){
+setTimeout(function () {document.getElementById("text1").innerHTML="Ant";
+ var inputmsg="A.. N.. T.......";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Aanntt";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 7000 ) ;
+ 
+ setTimeout(function () {document.getElementById('image1').style.display='block';
+ document.getElementById("image1").src = "{{ url_for('static', filename='img/ant.png') }}"}, 9000 ) ;
+textA2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textA2(){
+setTimeout(function () {document.getElementById("text2").innerHTML="Animals";
+ var inputmsg="A :: N :: I :: M :: A :: L :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Animals";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 12000 ) ;
+ 
+ setTimeout(function () {document.getElementById('image2').style.display='block';
+ document.getElementById("image2").src = "{{ url_for('static', filename='img/animal.png') }}"}, 20000 ) ;
+ setTimeout(function () {document.getElementById('button').style.display='block'}, 21000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textAfinish(){
+    setTimeout(function () {document.getElementById('A').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+<!--  ALPHABET B -->   
+<script type="text/javascript">
+  function clickedB(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('B').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textB(){
+ document.getElementById("textb").innerHTML="Bat";
+ var inputmsg="B :: A.. T..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Bat";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imageb').style.display='block';
+ document.getElementById("imageb").src = "{{ url_for('static', filename='img/bat.png') }}"}, 3000 ) ;
+textB1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textB1(){
+setTimeout(function () {document.getElementById("textb1").innerHTML="Ball";
+ var inputmsg="B :: A.. L.. L......";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Ball";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imageb1').style.display='block';
+ document.getElementById("imageb1").src = "{{ url_for('static', filename='img/ball1.png') }}"}, 8000 ) ;
+textB2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textB2(){
+setTimeout(function () {document.getElementById("textb2").innerHTML="Bag";
+ var inputmsg="B :: A.. G.......";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Bag";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 13000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imageb2').style.display='block';
+ document.getElementById("imageb2").src = "{{ url_for('static', filename='img/bag.png') }}"}, 15000 ) ;
+ setTimeout(function () {document.getElementById('buttonB').style.display='block'}, 18000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textBfinish(){
+    setTimeout(function () {document.getElementById('B').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+<!--  ALPHABET C -->   
+<script type="text/javascript">
+  function clickedC(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('C').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textC(){
+ document.getElementById("textc").innerHTML="Cat";
+ var inputmsg="C :: A.. T..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Cat";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imagec').style.display='block';
+ document.getElementById("imagec").src = "{{ url_for('static', filename='img/car1.png') }}"}, 3000 ) ;
+textC1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textC1(){
+setTimeout(function () {document.getElementById("textc1").innerHTML="Car";
+ var inputmsg="C :: A.. R....";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Car";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagec1').style.display='block';
+ document.getElementById("imagec1").src = "{{ url_for('static', filename='img/car.png') }}"}, 8000 ) ;
+textC2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textC2(){
+setTimeout(function () {document.getElementById("textc2").innerHTML="Carrot";
+ var inputmsg="C :: A :: R :: R :: O :: T";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Carrot";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 13000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagec2').style.display='block';
+ document.getElementById("imagec2").src = "{{ url_for('static', filename='img/carrot1.png') }}"}, 15000 ) ;
+ setTimeout(function () {document.getElementById('buttonC').style.display='block'}, 18000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textCfinish(){
+    setTimeout(function () {document.getElementById('C').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+<!--  ALPHABET D -->   
+<script type="text/javascript">
+  function clickedD(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('D').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textD(){
+ document.getElementById("textd").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imaged').style.display='block';
+ document.getElementById("imaged").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textD1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textD1(){
+setTimeout(function () {document.getElementById("textd1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imaged1').style.display='block';
+ document.getElementById("imaged1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textD2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textD2(){
+setTimeout(function () {document.getElementById("textd2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imaged2').style.display='block';
+ document.getElementById("imaged2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonD').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textDfinish(){
+    setTimeout(function () {document.getElementById('D').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+<!--  ALPHABET E -->   
+<script type="text/javascript">
+  function clickedE(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('E').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textE(){
+ document.getElementById("texte").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imagee').style.display='block';
+ document.getElementById("imagee").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textE1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textE1(){
+setTimeout(function () {document.getElementById("texte1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagee1').style.display='block';
+ document.getElementById("imagee1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textE2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textE2(){
+setTimeout(function () {document.getElementById("texte2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagee2').style.display='block';
+ document.getElementById("imagee2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonE').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textEfinish(){
+    setTimeout(function () {document.getElementById('E').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+<!--  ALPHABET F -->   
+<script type="text/javascript">
+  function clickedF(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('F').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textF(){
+ document.getElementById("textf").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imagef').style.display='block';
+ document.getElementById("imagef").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textF1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textF1(){
+setTimeout(function () {document.getElementById("textf1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagef1').style.display='block';
+ document.getElementById("imagef1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textF2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textF2(){
+setTimeout(function () {document.getElementById("textf2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagef2').style.display='block';
+ document.getElementById("imagef2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonF').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textFfinish(){
+    setTimeout(function () {document.getElementById('F').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+<!--  ALPHABET G -->   
+<script type="text/javascript">
+  function clickedG(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('G').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textG(){
+ document.getElementById("textg").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imageg').style.display='block';
+ document.getElementById("imageg").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textG1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textG1(){
+setTimeout(function () {document.getElementById("textg1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imageg1').style.display='block';
+ document.getElementById("imageg1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textG2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textG2(){
+setTimeout(function () {document.getElementById("textg2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imageg2').style.display='block';
+ document.getElementById("imageg2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonG').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textGfinish(){
+    setTimeout(function () {document.getElementById('G').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+<!--  ALPHABET H -->   
+<script type="text/javascript">
+  function clickedH(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('H').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textH(){
+ document.getElementById("texth").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imageh').style.display='block';
+ document.getElementById("imageh").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textH1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textH1(){
+setTimeout(function () {document.getElementById("texth1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imageh1').style.display='block';
+ document.getElementById("imageh1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textH2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textH2(){
+setTimeout(function () {document.getElementById("texth2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imageh2').style.display='block';
+ document.getElementById("imageh2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonH').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textHfinish(){
+    setTimeout(function () {document.getElementById('H').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+
+<!--  ALPHABET I -->   
+<script type="text/javascript">
+  function clickedI(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('I').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textI(){
+ document.getElementById("texti").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imagei').style.display='block';
+ document.getElementById("imagei").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textI1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textI1(){
+setTimeout(function () {document.getElementById("texti1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagei1').style.display='block';
+ document.getElementById("imagei1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textI2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textI2(){
+setTimeout(function () {document.getElementById("texthi2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagei2').style.display='block';
+ document.getElementById("imagei2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonI').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textIfinish(){
+    setTimeout(function () {document.getElementById('I').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+
+<!--  ALPHABET J -->   
+<script type="text/javascript">
+  function clickedJ(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('J').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textJ(){
+ document.getElementById("textj").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imagej').style.display='block';
+ document.getElementById("imagej").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textJ1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textJ1(){
+setTimeout(function () {document.getElementById("textj1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagej1').style.display='block';
+ document.getElementById("imagej1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textJ2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textJ2(){
+setTimeout(function () {document.getElementById("textj2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagej2').style.display='block';
+ document.getElementById("imagej2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonJ').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textJfinish(){
+    setTimeout(function () {document.getElementById('J').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+<!--  ALPHABET K -->   
+<script type="text/javascript">
+  function clickedK(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('K').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textK(){
+ document.getElementById("textk").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imagek').style.display='block';
+ document.getElementById("imagek").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textK1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textK1(){
+setTimeout(function () {document.getElementById("textk1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagek1').style.display='block';
+ document.getElementById("imagek1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textK2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textK2(){
+setTimeout(function () {document.getElementById("textk2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagek2').style.display='block';
+ document.getElementById("imagek2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonK').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textKfinish(){
+    setTimeout(function () {document.getElementById('K').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+<!--  ALPHABET L -->   
+<script type="text/javascript">
+  function clickedL(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('L').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textL(){
+ document.getElementById("textl").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imagel').style.display='block';
+ document.getElementById("imagel").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textL1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textL1(){
+setTimeout(function () {document.getElementById("textl1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagel1').style.display='block';
+ document.getElementById("imagel1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textL2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textL2(){
+setTimeout(function () {document.getElementById("textl2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagel2').style.display='block';
+ document.getElementById("imagel2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonL').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textLfinish(){
+    setTimeout(function () {document.getElementById('L').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+<!--  ALPHABET M -->   
+<script type="text/javascript">
+  function clickedM(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('M').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textM(){
+ document.getElementById("textm").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imagem').style.display='block';
+ document.getElementById("imagem").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textM1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textM1(){
+setTimeout(function () {document.getElementById("textm1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagem1').style.display='block';
+ document.getElementById("imagem1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textM2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textM2(){
+setTimeout(function () {document.getElementById("textm2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagem2').style.display='block';
+ document.getElementById("imagem2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonM').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textMfinish(){
+    setTimeout(function () {document.getElementById('M').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+<!--  ALPHABET N -->   
+<script type="text/javascript">
+  function clickedN(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('N').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textN(){
+ document.getElementById("textn").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imagen').style.display='block';
+ document.getElementById("imagen").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textN1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textN1(){
+setTimeout(function () {document.getElementById("textn1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagen1').style.display='block';
+ document.getElementById("imagen1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textN2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textN2(){
+setTimeout(function () {document.getElementById("textn2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagen2').style.display='block';
+ document.getElementById("imagen2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonN').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textNfinish(){
+    setTimeout(function () {document.getElementById('N').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+<!--  ALPHABET O -->   
+<script type="text/javascript">
+  function clickedO(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('O').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textO(){
+ document.getElementById("texto").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imageo').style.display='block';
+ document.getElementById("imageo").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textO1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textO1(){
+setTimeout(function () {document.getElementById("textho1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imageo1').style.display='block';
+ document.getElementById("imageo1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textO2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textO2(){
+setTimeout(function () {document.getElementById("texto2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imageo2').style.display='block';
+ document.getElementById("imageo2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonO').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textOfinish(){
+    setTimeout(function () {document.getElementById('O').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+<!--  ALPHABET P -->   
+<script type="text/javascript">
+  function clickedP(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('P').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textP(){
+ document.getElementById("textp").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imagep').style.display='block';
+ document.getElementById("imagep").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textP1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textP1(){
+setTimeout(function () {document.getElementById("textp1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagep1').style.display='block';
+ document.getElementById("imagep1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textP2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textP2(){
+setTimeout(function () {document.getElementById("textp2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagep2').style.display='block';
+ document.getElementById("imagep2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonP').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textPfinish(){
+    setTimeout(function () {document.getElementById('P').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+<!--  ALPHABET Q -->   
+<script type="text/javascript">
+  function clickedQ(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('Q').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textQ(){
+ document.getElementById("textq").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imageq').style.display='block';
+ document.getElementById("imageq").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textQ1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textQ1(){
+setTimeout(function () {document.getElementById("textq1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imageq1').style.display='block';
+ document.getElementById("imageq1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textQ2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textQ2(){
+setTimeout(function () {document.getElementById("textq2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imageq2').style.display='block';
+ document.getElementById("imageq2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonQ').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textQfinish(){
+    setTimeout(function () {document.getElementById('Q').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+<!--  ALPHABET R -->   
+<script type="text/javascript">
+  function clickedR(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('R').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textR(){
+ document.getElementById("textr").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imager').style.display='block';
+ document.getElementById("imager").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textR1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textR1(){
+setTimeout(function () {document.getElementById("textr1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imager1').style.display='block';
+ document.getElementById("imager1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textR2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textR2(){
+setTimeout(function () {document.getElementById("textr2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imager2').style.display='block';
+ document.getElementById("imager2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonR').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textRfinish(){
+    setTimeout(function () {document.getElementById('R').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+<!--  ALPHABET S -->   
+<script type="text/javascript">
+  function clickedS(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('S').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textS(){
+ document.getElementById("texts").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('images').style.display='block';
+ document.getElementById("images").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textS1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textS1(){
+setTimeout(function () {document.getElementById("texts1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('images1').style.display='block';
+ document.getElementById("images1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textS2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textS2(){
+setTimeout(function () {document.getElementById("texts2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('images2').style.display='block';
+ document.getElementById("images2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonS').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textSfinish(){
+    setTimeout(function () {document.getElementById('S').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+<!--  ALPHABET T -->   
+<script type="text/javascript">
+  function clickedT(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('T').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textT(){
+ document.getElementById("textt").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imaget').style.display='block';
+ document.getElementById("imaget").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textT1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textT1(){
+setTimeout(function () {document.getElementById("textt1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imaget1').style.display='block';
+ document.getElementById("imaget1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textT2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textT2(){
+setTimeout(function () {document.getElementById("textt2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imaget2').style.display='block';
+ document.getElementById("imaget2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonT').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textTfinish(){
+    setTimeout(function () {document.getElementById('T').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+<!--  ALPHABET U -->   
+<script type="text/javascript">
+  function clickedU(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('U').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textU(){
+ document.getElementById("textu").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imageu').style.display='block';
+ document.getElementById("imageu").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textU1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textU1(){
+setTimeout(function () {document.getElementById("textu1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imageu1').style.display='block';
+ document.getElementById("imageu1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textU2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textU2(){
+setTimeout(function () {document.getElementById("textu2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imageu2').style.display='block';
+ document.getElementById("imageu2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonU').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textUfinish(){
+    setTimeout(function () {document.getElementById('U').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+<!--  ALPHABET V -->   
+<script type="text/javascript">
+  function clickedV(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('V').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textV(){
+ document.getElementById("textv").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imagev').style.display='block';
+ document.getElementById("imagev").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textV1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textV1(){
+setTimeout(function () {document.getElementById("textv1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagev1').style.display='block';
+ document.getElementById("imagev1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textV2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textV2(){
+setTimeout(function () {document.getElementById("textv2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagev2').style.display='block';
+ document.getElementById("imagev2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonV').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textVfinish(){
+    setTimeout(function () {document.getElementById('V').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+<!--  ALPHABET W -->   
+<script type="text/javascript">
+  function clickedW(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('W').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textW(){
+ document.getElementById("textw").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imagew').style.display='block';
+ document.getElementById("imagew").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textW1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textW1(){
+setTimeout(function () {document.getElementById("textw1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagew1').style.display='block';
+ document.getElementById("imagew1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textW2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textW2(){
+setTimeout(function () {document.getElementById("textw2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagew2').style.display='block';
+ document.getElementById("imagew2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonW').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textWfinish(){
+    setTimeout(function () {document.getElementById('W').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+<!--  ALPHABET X -->   
+<script type="text/javascript">
+  function clickedX(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('X').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textX(){
+ document.getElementById("textx").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imagex').style.display='block';
+ document.getElementById("imagex").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textX1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textX1(){
+setTimeout(function () {document.getElementById("textx1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagex1').style.display='block';
+ document.getElementById("imagex1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textX2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textX2(){
+setTimeout(function () {document.getElementById("textx2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagex2').style.display='block';
+ document.getElementById("imagex2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonX').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textXfinish(){
+    setTimeout(function () {document.getElementById('X').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+<!--  ALPHABET Y -->   
+<script type="text/javascript">
+  function clickedY(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('Y').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textY(){
+ document.getElementById("texty").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imagey').style.display='block';
+ document.getElementById("imagey").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textY1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textY1(){
+setTimeout(function () {document.getElementById("texty1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagey1').style.display='block';
+ document.getElementById("imagey1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textY2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textY2(){
+setTimeout(function () {document.getElementById("texty2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagey2').style.display='block';
+ document.getElementById("imagey2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonY').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textYfinish(){
+    setTimeout(function () {document.getElementById('Y').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+<!--  ALPHABET Z -->   
+<script type="text/javascript">
+  function clickedZ(){
+    setTimeout(function () {document.getElementById('alpha').style.display='none'; document.getElementById('Z').style.display='block'}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function textZ(){
+ document.getElementById("textz").innerHTML="Dog";
+ var inputmsg="D :: O.. G..... ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.4;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dog";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1);
+ setTimeout(function () {document.getElementById('imagez').style.display='block';
+ document.getElementById("imagez").src = "{{ url_for('static', filename='img/dog.png') }}"}, 3000 ) ;
+textZ1();
+}
+
+</script>
+
+<script type="text/javascript">
+function textZ1(){
+setTimeout(function () {document.getElementById("textz1").innerHTML="Dress";
+ var inputmsg="D :: R :: E :: S :: S";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dress";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 6000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagez1').style.display='block';
+ document.getElementById("imagez1").src = "{{ url_for('static', filename='img/dress.png') }}"}, 8000 ) ;
+textZ2();
+}
+
+</script>
+
+<script type="text/javascript">
+function textZ2(){
+setTimeout(function () {document.getElementById("textz2").innerHTML="Dice";
+ var inputmsg="D :: I :: C :: E";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    msg.rate = 0.3;
+    window.speechSynthesis.speak(msg);
+    var inputmsg1="Dice";
+    var msg1 = new SpeechSynthesisUtterance(inputmsg1);
+    msg1.rate = 0.4;
+    window.speechSynthesis.speak(msg1)}, 15000 ) ;
+ 
+ setTimeout(function () {document.getElementById('imagez2').style.display='block';
+ document.getElementById("imagez2").src = "{{ url_for('static', filename='img/dice.png') }}"}, 18000 ) ;
+ setTimeout(function () {document.getElementById('buttonZ').style.display='block'}, 20000 ) ;
+
+}
+
+</script>
+<script type="text/javascript">
+  function textZfinish(){
+    setTimeout(function () {document.getElementById('Z').style.display='none'; document.getElementById('alpha').style.display='block'}, 1.000 ) ;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+ 
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Learning</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- <link href="{{ url_for('static', filename='css/mycss.css') }}"> -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme|Englebert|Jua|Pattaya');
+main{
+  
+  height:auto;
+  max-height: 2200px; 
+  width: 100%;
+  
+  max-width:1570px;
+  
+
+}
+#home{
+  width: 100%;
+  height: 900px;
+  background-color: rgba(254, 198, 21,0.2)!important;
+  position: relative;
+  
+  
+
+  
+}
+
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(227,158,89,0.2); 
+  color: black;
+  text-align: center;
+ border-style: none !important;
+}
+h1{
+   font-family: 'Englebert', sans-serif;
+        color: black;
+        font-size: 40px;
+  
+}
+h2{
+  color: pink;
+}
+
+#logo{
+height:35px;
+width:40px;
+position:relative;
+top:-7px;
+left:10px;
+}
+.title{
+  width: 300px;
+  height: 100px;
+  border: 5px solid pink;
+  background-color: rgba(255,192,203,0.3);
+}
+    </style>
+    </head>
+  <body>
+    <main><nav  class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+<img  id="logo" src="{{ url_for('static', filename='img/logo.png') }}" >
+</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><?php  if (isset($_SESSION['username'])) : ?>
+      <p id="session">Welcome <strong><p id="session" name="userdisplay">{% if 'loginusername' in session %}
+  {{ session['loginusername'] }}
+{% endif %}</p></strong></p></strong></p></strong></p>
+      <p> <a  href="{{(url_for('logout'))}}"  class="link" id="session">LOGOUT</a> </p>
+    <?php endif ?></li>
+      </ul>
+<div>
+<div>
+</nav>
+      <section  id="home" class="container-fluid " data-aos="fade-left" data-aos-delay="100">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100">
+        <br><br>
+        <center><div class="title"><h1>Curiosity</h1></div> <br>
+          <h2>1. Listen, repeat and sing.</h2></center>
+      </div>
+
+      <div id="1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: block;">
+        <center><h4>Click the button below to start.</h4>
+        <button type="button" class="btn btn-info btn-lg" onclick="start()">Click me</button>
+        </div></center>
+      </div>
+
+      <div id="2" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        <center>
+          
+          <h3 id="text"></h3>
+          <h3 id="text1"></h3>
+          <h3 id="text2"></h3>
+          <h3 id="text3"></h3>
+          <h3 id="text4"></h3>
+          <h3 id="text5"></h3>
+          <h3 id="text6"></h3>
+          <h3 id="text7"></h3>
+          <h3 id="text8"></h3>
+          <h3 id="text9"></h3>
+          <h3 id="text10"></h3>
+          <h3 id="text11"></h3>
+          
+        </center>
+      </div>
+      <div id="3" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        <center>
+          
+          <a href="{{(url_for('std3poemgood'))}}"><input type="submit" class="btn btn-primary btn-lg" value="Next"></a>
+          
+        </center>
+      </div>
+    </div>
+    
+  </div>
+</section>
+  
+<section id="footer">
+  <div class="footer">
+  <p>CopyRight All Rights Reserved</p>
+</div>
+</section>
+</main>
+
+   <script src="{{ url_for('static',     filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/bootstrap.min.js') }}"></script>
+    {% block content %}
+    {% endblock %}
+<script type="text/javascript">
+  function start(){
+    setTimeout(function () {document.getElementById('1').style.display='none'; document.getElementById('2').style.display='block'; printpoem()}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function printpoem(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Tell me, tell me everything ! ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text").innerHTML="Tell me, tell me everything !  "}, 1000 ) ;
+poem2();
+}
+
+</script>
+<script type="text/javascript">
+function poem2(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "What makes it Winter And then Spring ?";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text1").innerHTML="What makes it Winter And then Spring ?"}, 5000 ) ;
+poem3();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem3(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Which ore the children Butterflies ?";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text2").innerHTML="Which ore the children Butterflies ?"}, 8000 ) ;
+poem4();
+}
+
+</script>
+<script type="text/javascript">
+function poem4(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Why do people keep Winking their eyes ?";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text3").innerHTML="Why do people keep Winking their eyes ?"}, 11000 ) ;
+poem5();
+}
+
+</script>
+<script type="text/javascript">
+function poem5(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Where do birds sleep ? ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text4").innerHTML="Where do birds sleep ? "}, 16000 );
+poem6();
+}
+
+</script>
+<script type="text/javascript">
+function poem6(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Do bees like to sting ?";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text5").innerHTML="Do bees like to sting ?"}, 20000 );
+poem7();
+}
+
+</script>
+<script type="text/javascript">
+function poem7(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Tell me, tell me please, everything !";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text6").innerHTML="Tell me, tell me please, everything !"}, 24000 );
+poem8();
+}
+
+</script>
+<script type="text/javascript">
+function poem8(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Tell me; tell me, I want to know ! ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text7").innerHTML="Tell me; tell me, I want to know !"}, 28000 );
+poem9();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem9(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "What makes leaves grow In the shapes they grow ? ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text8").innerHTML="What makes leaves grow In the shapes they grow ?"}, 33000 );
+poem10();
+}
+
+</script>
+<script type="text/javascript">
+function poem10(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Why do goldfish keep chewing ?  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text9").innerHTML="Why do goldfish keep chewing ?  "}, 36000 );
+poem11()
+}
+
+</script>
+
+
+
+<script type="text/javascript">
+function poem11(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "and rabbits Warble their noses ? Just from habits ?";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text10").innerHTML="and rabbits Warble their noses ? Just from habits ?"}, 40000 );
+poem12();
+}
+
+</script>
+<script type="text/javascript">
+function poem12(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = " Where does the wind,When it goes away, go ?Tell me ! Or don't even grown-ups know ?";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text11").innerHTML="Where does the wind,When it goes away, go ?Tell me ! Or don't even grown-ups know ? " ; document.getElementById('3').style.display='block'}, 44000 );
+
+}
+
+</script>
+  </body>
+ 
+</html>
+
+
+
+
+
+
+
+
+
+
+

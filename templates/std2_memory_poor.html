@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Learning</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- <link href="{{ url_for('static', filename='css/mycss.css') }}"> -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme|Englebert|Jua|Pattaya');
+main{
+  
+  height:auto;
+  max-height: 2200px; 
+  width: 100%;
+  
+  max-width:1570px;
+  
+
+}
+#home{
+  width: 100%;
+  height:2200px;
+ background-color: rgba(254, 198, 21,0.2)!important;
+  position: relative;
+  
+  
+
+  
+}
+
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(227,158,89,0.2); 
+  color: black;
+  text-align: center;
+ border-style: none !important;
+}
+h1{
+   font-family: 'Englebert', sans-serif;
+        color: black;
+        font-size: 40px;
+  
+}
+h2{
+  color: pink;
+}
+
+#logo{
+height:35px;
+width:40px;
+position:relative;
+top:-7px;
+left:10px;
+}
+.title{
+  width: 400px;
+  height: 100px;
+  border: 5px solid pink;
+  background-color: rgba(255,192,203,0.3);
+}
+    </style>
+    </head>
+  <body>
+    <main><nav  class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+<img  id="logo" src="{{ url_for('static', filename='img/logo.png') }}" >
+</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><?php  if (isset($_SESSION['username'])) : ?>
+      <p id="session">Welcome <strong><p id="session" name="userdisplay">{% if 'username' in session %}
+  {{ session['username'] }}
+{% endif %}</p></strong></p></strong></p></strong></p>
+      <p> <a  href="{{(url_for('logout'))}}"  class="link" id="session">LOGOUT</a> </p>
+    <?php endif ?></li>
+      </ul>
+<div>
+<div>
+</nav>
+      <section  id="home" class="container-fluid " data-aos="fade-left" data-aos-delay="100">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100">
+        <br><br>
+        <center><div class="title"><h1>  The Visit to Grandmother.</h1></div> <br>
+          <h2>1. Listen and remember.</h2></center>
+      </div>
+
+      <div id="1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: block;">
+        <center><h4>Click the button below to start.</h4>
+        <button type="button" class="btn btn-info btn-lg" onclick="start()">Click me</button>
+        </div></center>
+      </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" >
+          <img id="image1" style="width: 300px; height: 200px; display:none;" >
+        </div>
+      <div id="2" class="col-lg-4 col-md-4 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        
+          
+          <h3 id="text"></h3>
+          <h3 id="text1"></h3>
+          <h3 id="text2"></h3>
+          <h3 id="text3"></h3>
+          
+           
+      </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" >
+          <img id="image11" style="width: 300px; height: 200px; display:none;" >
+        </div>
+        <br>
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <br><br><img id="image2" style="width: 300px; height: 200px; display:none;" >
+        </div>
+        <div id="3" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+          <h3 id="text4"></h3>
+          <h3 id="text5"></h3>
+          <h3 id="text6"></h3>
+          <h3 id="text7"></h3>
+          
+          
+           
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <br><br>
+        </div>
+        <div id="4" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        
+      
+          <h3 id="text8"></h3>
+          <h3 id="text9"></h3>
+          <h3 id="text10"></h3>
+          <h3 id="text11"></h3>
+           
+      </div>
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <img id="image3" style="width: 400px; height: 300px; display:none;" >
+        </div>
+         
+      
+        
+         
+       
+    </div>
+    
+  </div>
+</section>
+  
+<!-- <section id="footer">
+  <div class="footer">
+  <p>CopyRight All Rights Reserved</p>
+</div>
+</section> -->
+</main>
+
+   <script src="{{ url_for('static',     filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/bootstrap.min.js') }}"></script>
+    {% block content %}
+    {% endblock %}
+<script type="text/javascript">
+  function start(){
+    setTimeout(function () {document.getElementById('1').style.display='none'; document.getElementById('2').style.display='block'; printpoem()}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function printpoem(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "We packed our bags.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text").innerHTML="We packed our bags.   "; document.getElementById('image1').style.display='block';
+ document.getElementById("image1").src = "{{ url_for('static', filename='img/std2mem1poor.png') }}"}, 1000 ) ;
+poem2();
+}
+
+</script>
+<script type="text/javascript">
+function poem2(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = " We went to the bus-stand. ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text1").innerHTML=" We went to the bus-stand. "}, 4000 ) ;
+poem3();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem3(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Our bus was ready. ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text2").innerHTML="Our bus was ready. " ; document.getElementById('image11').style.display='block';
+ document.getElementById("image11").src = "{{ url_for('static', filename='img/std2mem2poor.png') }}"}, 8000 ) ;
+poem4();
+}
+
+</script>
+<script type="text/javascript">
+function poem4(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "We boarded the bus.";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text3").innerHTML="We boarded the bus."}, 11000 ) ;
+  poem5();
+}
+
+</script>
+<script type="text/javascript">
+function poem5(){
+ 
+ setTimeout(function () { document.getElementById('3').style.display='block'; }, 1.000 ) ;
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "We found our seats. ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text4").innerHTML="We found our seats.  "; document.getElementById('image2').style.display='block';
+ document.getElementById("image2").src = "{{ url_for('static', filename='img/std2mem3poor.png') }}"}, 12000 );
+poem6();
+}
+
+</script>
+<script type="text/javascript">
+function poem6(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Our seat numbers were 11, 12, 13, 14. I sat near the window.";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text5").innerHTML="Our seat numbers were 11, 12, 13, 14. I sat near the window."}, 15000 );
+poem7();
+}
+
+</script>
+<script type="text/javascript">
+function poem7(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = " I saw some hills. I saw some trees passing by too. ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text6").innerHTML="  I saw some hills. I saw some trees passing by too. "}, 22000 );
+poem8();
+}
+
+</script>
+<script type="text/javascript">
+function poem8(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "I saw markets full of people.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text7").innerHTML="I saw markets full of people. "}, 28000 );
+poem9();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem9(){
+ 
+  setTimeout(function () { document.getElementById('4').style.display='block'; }, 1.000 ) ;
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "We reached Grandmother's home after four hours.   ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text8").innerHTML="We reached Grandmother's home after four hours. "; document.getElementById('image3').style.display='block';
+ document.getElementById("image3").src = "{{ url_for('static', filename='img/std2mem4poor.png') }}"}, 32000 );
+poem10();
+}
+
+</script>
+<script type="text/javascript">
+function poem10(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = " She welcomed us and hugged us.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text9").innerHTML=" She welcomed us and hugged us. "}, 36000 );
+poem11();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem11(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "We love our Grandmother.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text10").innerHTML="We love our Grandmother. "}, 39000 );
+poem12();
+}
+
+</script>
+<script type="text/javascript">
+function poem12(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "We love our Grandfather too.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text11").innerHTML="We love our Grandfather too."}, 42000 );
+
+}
+
+</script>
+
+
+
+
+
+
+
+
+  </body>
+ 
+</html>
+
+
+
+
+
+
+
+
+
+
+

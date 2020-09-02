@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Aclonica');
+@import url('https://fonts.googleapis.com/css?family=Caudex:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Coiny');
+@import url('https://fonts.googleapis.com/css?family=Redressed');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Acme|Englebert|Jua|Pattaya');
+
+body,main{
+	margin: 0px;
+	padding: 0px;
+
+}
+
+main{
+	
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('C:/Users/Palak/WebDD Arena/bgmiss.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
+	overflow-y: auto;
+	
+
+}
+#maincontentheader{
+	width: 1180px;
+	position: absolute;
+	top: 50%;
+	left: 45%;
+	transform: translate(-50%,-50%);
+
+}

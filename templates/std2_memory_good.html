@@ -1,0 +1,520 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Learning</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- <link href="{{ url_for('static', filename='css/mycss.css') }}"> -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme|Englebert|Jua|Pattaya');
+main{
+  
+  height:auto;
+  max-height: 2200px; 
+  width: 100%;
+  
+  max-width:1570px;
+  
+
+}
+#session{
+font-family: "Kaushan Script", cursive;font-size:20px;
+color: white;
+}
+#home{
+  width: 100%;
+  height:2200px;
+ background-color: rgba(254, 198, 21,0.2)!important;
+  position: relative;
+  
+  
+
+  
+}
+
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(227,158,89,0.2); 
+  color: black;
+  text-align: center;
+ border-style: none !important;
+}
+h1{
+   font-family: 'Englebert', sans-serif;
+        color: black;
+        font-size: 40px;
+  
+}
+h2{
+  color: pink;
+}
+
+#logo{
+height:35px;
+width:40px;
+position:relative;
+top:-7px;
+left:10px;
+}
+.title{
+  width: 400px;
+  height: 100px;
+  border: 5px solid pink;
+  background-color: rgba(255,192,203,0.3);
+}
+    </style>
+    </head>
+  <body>
+    <main><nav  class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+<img  id="logo" src="{{ url_for('static', filename='img/logo.png') }}" >
+</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><?php  if (isset($_SESSION['username'])) : ?>
+      <p id="session">Welcome <strong><p id="session" name="userdisplay">{% if 'loginusername' in session %}
+  {{ session['.loginusername'] }}
+{% endif %}</p></strong></p></strong></p></strong></p>
+      <p> <a  href="{{(url_for('logout'))}}"  class="link" id="session">LOGOUT</a> </p>
+    <?php endif ?></li>
+      </ul>
+<div>
+<div>
+</nav>
+      <section  id="home" class="container-fluid " data-aos="fade-left" data-aos-delay="100">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100">
+        <br><br>
+        <center><div class="title"><h1> The Lion and the Mouse.</h1></div> <br>
+          <h2>1. Listen and remember.</h2></center>
+      </div>
+
+      <div id="1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: block;">
+        <center><h4>Click the button below to start.</h4>
+        <button type="button" class="btn btn-info btn-lg" onclick="start()">Click me</button>
+        </div></center>
+      </div>
+
+      <div id="2" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        
+          
+          <h3 id="text"></h3>
+          <h3 id="text1"></h3>
+          <h3 id="text2"></h3>
+          <h3 id="text3"></h3>
+          
+           
+      </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <img id="image1" style="width: 300px; height: 200px; display:none;" >
+        </div>
+        <br>
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <img id="image2" style="width: 300px; height: 200px; display:none;" >
+        </div>
+        <div id="3" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+          <h3 id="text4"></h3>
+          <h3 id="text5"></h3>
+          <h3 id="text6"></h3>
+          <h3 id="text7"></h3>
+          
+          
+           
+      </div>
+      <div id="4" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        
+      
+          <h3 id="text8"></h3>
+          <h3 id="text9"></h3>
+          <h3 id="text10"></h3>
+          <h3 id="text11"></h3>
+           
+      </div>
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <img id="image3" style="width: 400px; height: 300px; display:none;" >
+        </div>
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <br> <br>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+         <img id="image4" style="width: 300px; height: 200px; display:none;" >
+        </div>
+          <div id="5" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+         
+      
+          <h3 id="text12"></h3>
+          <h3 id="text13"></h3>
+          <h3 id="text14"></h3>
+          <h3 id="text15"></h3>
+           
+      </div>
+      
+       <div id="6" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        <center>
+          
+          <a href="{{(url_for('std2memorygood'))}}"><input type="submit" class="btn btn-primary btn-lg" value="Next"></a>
+          
+        </center>
+      </div>
+    </div>
+    
+  </div>
+</section>
+  
+<!-- <section id="footer">
+  <div class="footer">
+  <p>CopyRight All Rights Reserved</p>
+</div>
+</section> -->
+</main>
+
+   <script src="{{ url_for('static',     filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/bootstrap.min.js') }}"></script>
+    {% block content %}
+    {% endblock %}
+<script type="text/javascript">
+  function start(){
+    setTimeout(function () {document.getElementById('1').style.display='none'; document.getElementById('2').style.display='block'; printpoem()}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function printpoem(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Once a lion was sleeping under a tree. A mouse saw him. ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text").innerHTML="Once a lion was sleeping under a tree. A mouse saw him.  "; document.getElementById('image1').style.display='block';
+ document.getElementById("image1").src = "{{ url_for('static', filename='img/std2mem1.png') }}"}, 1000 ) ;
+poem2();
+}
+
+</script>
+<script type="text/javascript">
+function poem2(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = " He ran up the lion’s tail and climbed on his back.";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text1").innerHTML=" He ran up the lion’s tail and climbed on his back."}, 7000 ) ;
+poem3();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem3(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "He jumped all over his body. ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text2").innerHTML="He jumped all over his body. "}, 12000 ) ;
+poem4();
+}
+
+</script>
+<script type="text/javascript">
+function poem4(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "He started sliding down the lion’s face again and again.";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text3").innerHTML="He started sliding down the lion’s face again and again."}, 16000 ) ;
+ poem5();
+}
+
+</script>
+<script type="text/javascript">
+function poem5(){
+ 
+ setTimeout(function () { document.getElementById('3').style.display='block'; }, 1.000 ) ;
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "The lion got up. He got very angry.";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text4").innerHTML="The lion got up. He got very angry. "; document.getElementById('image2').style.display='block';
+ document.getElementById("image2").src = "{{ url_for('static', filename='img/std2mem2.png') }}"}, 21000 );
+poem6();
+}
+
+</script>
+<script type="text/javascript">
+function poem6(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "He caught the little mouse in his paw.";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text5").innerHTML="He caught the little mouse in his paw."}, 26000 );
+poem7();
+}
+
+</script>
+<script type="text/javascript">
+function poem7(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = " He said angrily,“ You naughty mouse, how dare you disturb me? ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text6").innerHTML=" He said angrily,“ You naughty mouse, how dare you disturb me? "}, 31000 );
+poem8();
+}
+
+</script>
+<script type="text/javascript">
+function poem8(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Now see, how I punish you. I will eat you.”  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text7").innerHTML="Now see, how I punish you. I will eat you.” "}, 37000 );
+poem9();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem9(){
+ 
+  setTimeout(function () { document.getElementById('4').style.display='block'; }, 1.000 ) ;
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "The mouse was afraid. He started trembling.   ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text8").innerHTML="The mouse was afraid. He started trembling.  "; document.getElementById('image3').style.display='block';
+ document.getElementById("image3").src = "{{ url_for('static', filename='img/std2mem3.png') }}"}, 42000 );
+poem10();
+}
+
+</script>
+<script type="text/javascript">
+function poem10(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "He pleaded, “O lion, the king of jungle, I am really sorry. Please forgive me. Please let me go. I will help you some day.”  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text9").innerHTML="He pleaded, “O lion, the king of jungle, I am really sorry. Please forgive me. Please let me go. I will help you some day.” "}, 46000 );
+poem11();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem11(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "The lion laughed and said, “Oh really? you little mouse, how can you help me? That’s so funny! Anyway go, get away from here.” Then he set the mouse free.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text10").innerHTML="The lion laughed and said, “Oh really? you little mouse, how can you help me? That’s so funny! Anyway go, get away from here.” Then he set the mouse free. "}, 56000 );
+poem12();
+}
+
+</script>
+<script type="text/javascript">
+function poem12(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "“Thank you friend, thank you so much.” said the mouse and ran away quickly.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text11").innerHTML="“Thank you friend, thank you so much.” said the mouse and ran away quickly. "}, 68000 );
+poem13();
+}
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+function poem13(){
+ 
+  setTimeout(function () { document.getElementById('5').style.display='block'; }, 1.000 ) ;
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "A few days later, the lion was caught in a hunter’s net.   ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () { document.getElementById("text12").innerHTML="A few days later, the lion was caught in a hunter’s net.  " ;  document.getElementById('image4').style.display='block';
+ document.getElementById("image4").src = "{{ url_for('static', filename='img/std2mem4.png') }}"  }, 73000 );
+poem14();
+}
+
+</script>
+<script type="text/javascript">
+function poem14(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "He was roaring loudly. The mouse heard it and ran to the lion.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text13").innerHTML="He was roaring loudly. The mouse heard it and ran to the lion. "}, 77000 );
+poem15();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem15(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = " He saw the lion caught in the net. He called his friends. All the mice came together and nibbled the big net with their sharp teeth.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text14").innerHTML=" He saw the lion caught in the net. He called his friends. All the mice came together and nibbled the big net with their sharp teeth. "}, 82000 );
+poem16();
+}
+
+</script>
+<script type="text/javascript">
+function poem16(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "They set the lion free. The lion said, “Thank you dear little mouse. You saved my life.”  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text15").innerHTML="They set the lion free. The lion said, “Thank you dear little mouse. You saved my life.” " ; document.getElementById('6').style.display='block' }, 92000 );
+
+}
+
+</script>
+  </body>
+ 
+</html>
+
+
+
+
+
+
+
+
+
+
+

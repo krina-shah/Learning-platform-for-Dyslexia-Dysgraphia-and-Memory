@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Learning</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- <link href="{{ url_for('static', filename='css/mycss.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Acme|Englebert|Jua|Pattaya');
+      @import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+      main{
+  
+  height:auto;
+  max-height: 2200px; 
+  width: 100%;
+  
+  max-width:1570px;
+  
+
+}
+#home{
+  width: 100%;
+  height: 900px;
+  background-color: rgba(254, 198, 21,0.2)!important;
+  position: relative;
+  
+  
+
+  
+}
+#logo{
+height:35px;
+width:40px;
+position:relative;
+top:-7px;
+left:10px;
+}
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(227,158,89,0.2); 
+  color: black;
+  text-align: center;
+ border-style: none !important;
+}
+      .bgdiv{
+        width: 700px;
+        height: 500px;
+        border-radius: 5px;
+        border: solid;
+        border-color: black;
+        background-image: url("static/img/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+       .bgdiv2{
+        width: 700px;
+        height: 500px;
+        border-radius: 5px;
+        border: solid;
+        border-color: black;
+        background-image: url("static/img/giphy.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .bgdiv3{
+        width: 700px;
+        height: 500px;
+        border-radius: 5px;
+        border: solid;
+        border-color: black;
+        background-image: url("static/img/hideg1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+      }
+       
+      h2{
+        animation: colorchangeyummy 3s infinite;
+        font-family: 'Englebert', sans-serif;
+        color: black;
+        font-size: 60px;
+      }
+      @keyframes colorchangeyummy{
+  0%%{color: purple;}
+  25%{color: purple;}
+  50%{color: white;}
+  100%{color: purple;}
+}
+. btn-info{
+  border-radius: 4px !important;
+}
+#t1{
+  position: absolute;
+  left:  500px;
+  z-index: 1;
+  top: 330px;
+}
+#t1gif{
+  position: absolute;
+  left:  500px;
+  
+  top: 300px;
+}
+img:hover{
+
+  transform: skewY(10deg);
+}
+#ob1{
+  position: relative;
+  top: 80px;
+  left: -120px;
+  z-index: 2;
+}
+ .bgdiv5{
+        width: 700px;
+        height: 500px;
+        border-radius: 5px;
+        border: solid;
+        border-color: black;
+        background-image: url("static/img/hideg2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+      }
+      #ob2{
+  position: relative;
+  top: 10px;
+  left: -250px;
+ 
+}
+#ob3{
+  position: absolute;
+  top: 250px;
+  left: 750px;
+ transform: skewY(20deg);
+ z-index: 2;
+}
+#ob4{
+  position: absolute;
+  top: 240px;
+  left: 800px;
+ /*transform: skewY(20deg);*/
+ z-index: 1;
+}
+.bgdiv7{
+        width: 700px;
+        height: 500px;
+        border-radius: 5px;
+        border: solid;
+        border-color: black;
+        background-image: url("static/img/hidebglast.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+      }
+      #obt3{
+  position: absolute;
+  top: 311px;
+  left: 700px;
+ /*transform: skewY(20deg);*/
+ z-index: 1;
+}
+#ob71{
+  position: absolute;
+  top: 340px;
+  left: 600px;
+ /*transform: skewY(20deg);*/
+ z-index: 2;
+}
+#ob7{
+  position: absolute;
+  top: 365px;
+  left: 320px;
+ /*transform: skewY(20deg);*/
+ z-index: 1;
+}
+    </style>
+    </head>
+  <body>
+    <main><nav  class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <a class="navbar-brand" href="#">
+<img  id="logo" src="{{ url_for('static', filename='img/logo.png') }}" >
+</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a  id="help">Welcome</a></li>
+      </ul>
+<div>
+<div>
+</nav>
+      <section  id="home" class="container-fluid " data-aos="fade-left" data-aos-delay="100">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100">
+        <br>
+       <center> <div class="bgdiv" id="1" >
+      <!-- <center><img src="img/bg.jpg" style="width: 800px" style="height: 600px"></center> -->
+      <h2>Hide And Seek .</h2>
+       <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br><br> <br> <br>
+        <button type="button" class="btn btn-info btn-lg" id="btnClick" onclick="load()">Let's Play</button>
+      </div>
+
+      <div id="2" class="bgdiv2" style="display:none;">
+    
+</div>
+
+<div id="3" class="bgdiv3" style="display:none;" >
+   <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+     <a href="#" class="t" id="t1" ><img src="{{ url_for('static', filename='img/t1.jpg') }}" style="width: 80px; height: 180px;" ></a>
+      <a href="#" id="ob1" ><img src="{{ url_for('static', filename='img/hideobject1.png') }}" style="width: 200px; height: 220px;" onclick ="speakit()"></a>
+</div>
+
+
+<div id="4" class="bgdiv3" style="display:none;"  >
+   <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+     <a href="#" class="t" id="t1gif" ><img src="{{ url_for('static', filename='img/t1gif.gif') }}" style="width: 110px; height: 200px;" ></a>
+      <!-- <a href="#" id="ob1" ><img src="img/hideobject1.png" style="width: 200px; height: 220px;" onclick ="speakit()"></a> -->
+</div>
+
+<div id="5" class="bgdiv5" style="display:none;" >
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+    <a href="#" id="ob2" ><img src="{{ url_for('static', filename='img/ball.jpg') }}" style="width: 120px; height: 150px;" onclick ="speakit1()" ></a>
+    <a href="#" id="ob3" ><img src="{{ url_for('static', filename='img/ball1.png') }}" style="width: 180px; height: 180px;" onclick ="speakit2()" ></a>
+    <a href="#" id="ob4" ><img src="{{ url_for('static', filename='img/t2.png') }}" style="width: 80px; height: 180px;" ></a>
+</div>
+
+<div id="6" class="bgdiv5" style="display:none;" >
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+    <a href="#" id="ob2" ><img src="{{ url_for('static', filename='img/ball.jpg') }}" style="width: 120px; height: 150px;" ></a>
+    <!-- <a href="#" id="ob3" ><img src="img/ball1.png" style="width: 180px; height: 180px;" onclick ="speakit2()" ></a> -->
+    <a href="#" id="ob4" ><img src="{{ url_for('static', filename='img/t2gif.gif') }}" style="width: 80px; height: 180px;" ></a>
+</div>
+
+<div id="7" class="bgdiv7" style="display:none;" >
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+    <a href="#" id="ob7" ><img src="{{ url_for('static', filename='img/bed.png') }}" style="width: 120px; height: 150px;" onclick ="speakit3()" ></a>
+    <a href="#" id="ob71" ><img src="{{ url_for('static', filename='img/modern-chair.png') }}" style="width: 180px; height: 180px;" onclick ="speakit4()" ></a>
+    <a href="#" id="obt3" ><img src="{{ url_for('static', filename='img/t3.png') }}" style="width: 80px; height: 180px;" ></a>
+</div>
+
+<div id="8" class="bgdiv7" style="display:none;" >
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+    <a href="#" id="ob7" ><img src="{{ url_for('static', filename='img/bed.png') }}" style="width: 120px; height: 150px;"  ></a>
+    <!-- <a href="#" id="ob71" ><img src="{{ url_for('static', filename='img/modern-chair.png') }}" style="width: 180px; height: 180px;" onclick ="speakit2()" ></a> -->
+    <a href="#" id="obt3" ><img src="{{ url_for('static', filename='img/t3.gif') }}" style="width: 80px; height: 180px;" ></a>
+</div>
+
+ <div class="bgdiv" id="9" style="display:none;" >
+      <!-- <center><img src="img/bg.jpg" style="width: 800px" style="height: 600px"></center> -->
+      <h2>Thank You !</h2>
+       <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br><br> <br> <br>
+        <button type="button" class="btn btn-info btn-lg" id="btnClick">Next</button>
+      </div>
+    </center>
+      </div>
+
+    </div> 
+    
+  </div>
+</section>
+  
+<section id="footer">
+  <div class="footer">
+  <p>CopyRight All Rights Reserved</p>
+</div>
+</section>
+</main>
+
+   <script src="{{ url_for('static',     filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/aos.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/main.js') }}"></script>
+
+{% block content %}
+    {% endblock %}
+
+    <script >
+      $('#btnClick').on('click',function(){
+    if($('#1').css('display')!='none'){
+    $('#2').html("").show().siblings('div').hide();
+    }else if($('#2').css('display')!='none'){
+        $('#1').show().siblings('div').hide();
+    }
+});
+    </script>
+<script type="text/javascript">
+  function load(){
+    var inputmsg="Hello...      I am..    playing hide and seek with..... my family... lets play together.... close your eyes and.... count till three... one.. two.. three.. ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    window.speechSynthesis.speak(msg);
+   setTimeout(function () {document.getElementById('2').style.display='none'; document.getElementById('3').style.display='block'; hide()}, 14000 ) ;
+  //   awaitsleep(2000);
+  
+ 
+  }
+</script>
+<script type="text/javascript">
+function hide(argument) {
+ 
+
+  
+   setTimeout(function(){var inputmsg1=" Come.... Find.... me ";  var msg1 = new SpeechSynthesisUtterance(inputmsg1); window.speechSynthesis.speak(msg1)
+ }, 2000);
+}
+
+</script>
+<script type="text/javascript">
+  function speakit(argument) {
+  
+  // alert("hii");
+  setTimeout(function(){ var msg="I am hiding.. yes You Found me";
+  var send=new SpeechSynthesisUtterance(msg);
+  window.speechSynthesis.speak(send);
+ 
+  
+   
+  
+ }, 1000);
+ 
+setTimeout(function(){ 
+   document.getElementById('3').style.display='none';
+   document.getElementById('4').style.display='block';
+   var msg="Lets... Continue";
+  var send=new SpeechSynthesisUtterance(msg);
+  window.speechSynthesis.speak(send)
+  hide1()
+ }, 3000);
+}
+</script>
+
+
+<script type="text/javascript">
+  function hide1(argument) {
+    setTimeout(function(){ 
+   document.getElementById('4').style.display='none';
+   document.getElementById('5').style.display='block';
+  
+ }, 3000);
+  }
+</script>
+
+<script type="text/javascript">
+  function speakit1(argument) {
+  
+  // alert("hii");
+  setTimeout(function(){ var msg="Not here!... find me.. again";
+  var send=new SpeechSynthesisUtterance(msg);
+  window.speechSynthesis.speak(send);
+
+ }, 1000);
+ 
+
+}
+</script>
+
+<script type="text/javascript">
+  function speakit2(argument) {
+  
+  // alert("hii");
+  setTimeout(function(){ var msg="I am hiding.. yes You Found me";
+  var send=new SpeechSynthesisUtterance(msg);
+  window.speechSynthesis.speak(send);
+ 
+  
+   
+  
+ }, 1000);
+ 
+setTimeout(function(){ 
+   document.getElementById('5').style.display='none';
+   document.getElementById('6').style.display='block';
+   var msg="Lets... Continue";
+  var send=new SpeechSynthesisUtterance(msg);
+  window.speechSynthesis.speak(send)
+  hide2()
+ }, 3000);
+}
+
+</script>
+
+<script type="text/javascript">
+  function hide2() {
+    setTimeout(function(){ 
+   document.getElementById('6').style.display='none';
+   document.getElementById('7').style.display='block';
+  
+ }, 4000);
+  }
+</script>
+
+<script type="text/javascript">
+  function speakit3(argument) {
+  
+  // alert("hii");
+  setTimeout(function(){ var msg="Not here!... find me.. again";
+  var send=new SpeechSynthesisUtterance(msg);
+  window.speechSynthesis.speak(send);
+
+ }, 1000);
+ 
+
+}
+</script>
+<script type="text/javascript">
+  function speakit4(argument) {
+  
+  // alert("hii");
+  setTimeout(function(){ var msg="I am hiding.. yes You Found me";
+  var send=new SpeechSynthesisUtterance(msg);
+  window.speechSynthesis.speak(send);
+ 
+  
+   
+  
+ }, 1000);
+ 
+setTimeout(function(){ 
+   document.getElementById('7').style.display='none';
+   document.getElementById('8').style.display='block';
+   thankyou();
+  
+ }, 3000);
+}
+
+</script>
+<script type="text/javascript">
+  function thankyou() {
+    setTimeout(function(){ 
+   document.getElementById('8').style.display='none';
+   document.getElementById('9').style.display='block';
+  
+ }, 4000);
+  }
+</script>
+  </body>
+ 
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

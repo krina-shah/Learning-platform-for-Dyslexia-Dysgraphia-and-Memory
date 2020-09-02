@@ -1,0 +1,434 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Learning</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- <link href="{{ url_for('static', filename='css/mycss.css') }}"> -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme|Englebert|Jua|Pattaya');
+main{
+  
+  height:auto;
+  max-height: 2200px; 
+  width: 100%;
+  
+  max-width:1570px;
+  
+
+}
+#session{
+font-family: "Kaushan Script", cursive;font-size:20px;
+color: white;
+}
+#home{
+  width: 100%;
+  height: 900px;
+  background-color: rgba(254, 198, 21,0.2)!important;
+  position: relative;
+  
+  
+
+  
+}
+
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(227,158,89,0.2); 
+  color: black;
+  text-align: center;
+ border-style: none !important;
+}
+h1{
+   font-family: 'Englebert', sans-serif;
+        color: black;
+        font-size: 40px;
+  
+}
+h2{
+  color: pink;
+}
+
+#logo{
+height:35px;
+width:40px;
+position:relative;
+top:-7px;
+left:10px;
+}
+.title{
+  width: 300px;
+  height: 100px;
+  border: 5px solid pink;
+  background-color: rgba(255,192,203,0.3);
+}
+    </style>
+    </head>
+  <body>
+    <main><nav  class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+<img  id="logo" src="{{ url_for('static', filename='img/logo.png') }}" >
+</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><?php  if (isset($_SESSION['username'])) : ?>
+      <p id="session">Welcome <strong><p id="session" name="userdisplay">{% if 'loginusername' in session %}
+  {{ session['loginusername'] }}
+{% endif %}</p></strong></p></strong></p></strong></p>
+      <p> <a  href="{{(url_for('logout'))}}"  class="link" id="session">LOGOUT</a> </p>
+    <?php endif ?></li>
+      </ul>
+<div>
+<div>
+</nav>
+      <section  id="home" class="container-fluid " data-aos="fade-left" data-aos-delay="100">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100">
+        <br><br>
+        <center><div class="title"><h1>Action Song .</h1></div> <br>
+          <h2>1. Listen, repeat and sing.</h2></center>
+      </div>
+
+      <div id="1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: block;">
+        <center><h4>Click the button below to start.</h4>
+        <button type="button" class="btn btn-info btn-lg" onclick="start()">Click me</button>
+        </div></center>
+      </div>
+
+      <div id="2" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        <center>
+          
+          <h3 id="text"></h3>
+          <h3 id="text1"></h3>
+          <h3 id="text2"></h3>
+          <h3 id="text3"></h3>
+          <h3 id="text4"></h3>
+          <h3 id="text5"></h3>
+          <h3 id="text6"></h3>
+          <h3 id="text7"></h3>
+          <h3 id="text8"></h3>
+          <h3 id="text9"></h3>
+          <h3 id="text10"></h3>
+          <h3 id="text11"></h3>
+          <h3 id="text12"></h3>
+          <h3 id="text13"></h3>        
+        </center>
+      </div>
+<div id="3" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        <center>
+          
+          <a href=""><input type="submit" class="btn btn-primary btn-lg" value="Next"></a>
+          
+        </center>
+      </div>
+
+    </div>
+    
+  </div>
+</section>
+  
+</main>
+
+   <script src="{{ url_for('static',     filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/bootstrap.min.js') }}"></script>
+    {% block content %}
+    {% endblock %}
+<script type="text/javascript">
+  function start(){
+    setTimeout(function () {document.getElementById('1').style.display='none'; document.getElementById('2').style.display='block'; printpoem()}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function printpoem(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "You put your  right hand  in ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text").innerHTML="You put your  right hand  in  "}, 1000 ) ;
+poem2();
+}
+
+</script>
+<script type="text/javascript">
+function poem2(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "You put your right hand out ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text1").innerHTML="You put your right hand out"}, 5000 ) ;
+poem3();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem3(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "You put your right hand in  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text2").innerHTML="You put your right hand in  "}, 8000 ) ;
+poem4();
+}
+
+</script>
+<script type="text/javascript">
+function poem4(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "And shake it all about ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text3").innerHTML="And shake it all about "}, 11000 ) ;
+poem5();
+}
+
+</script>
+<script type="text/javascript">
+function poem5(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Do the boogie woogie  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text4").innerHTML="Do the boogie woogie  "}, 14000 );
+poem6();
+}
+
+</script>
+<script type="text/javascript">
+function poem6(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "And turn yourself around ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text5").innerHTML="And turn yourself around "}, 17000 );
+poem7();
+}
+
+</script>
+<script type="text/javascript">
+function poem7(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "That’s what it’s all about! ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text6").innerHTML="That’s what it’s all about! "}, 20000 );
+poem8();
+}
+
+</script>
+<script type="text/javascript">
+function poem8(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "You put your  left hand   in  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text7").innerHTML="You put your  left hand   in "}, 22000 );
+poem9();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem9(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "You put your left hand  out   ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text8").innerHTML="You put your left hand  out  "}, 25000 );
+poem10();
+}
+
+</script>
+<script type="text/javascript">
+function poem10(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "You put your left hand  in  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text9").innerHTML="You put your left hand  in  "}, 28000 );
+ poem11();
+}
+
+</script>
+<script type="text/javascript">
+    function poem11(){
+     
+     
+        var msg = new SpeechSynthesisUtterance();
+        var voices = window.speechSynthesis.getVoices();
+        msg.voice = voices[3];
+        msg.pitch = 1.1
+        msg.lang = 'hi-IN'
+        msg.text = "And shake it all about   ";
+        msg.rate = 0.7;
+        window.speechSynthesis.speak(msg);
+        
+     setTimeout(function () {document.getElementById("text10").innerHTML="And shake it all about  " }, 30000 );
+     poem12();
+    }
+    
+    </script>
+    <script type="text/javascript">
+        function poem12(){
+         
+         
+            var msg = new SpeechSynthesisUtterance();
+            var voices = window.speechSynthesis.getVoices();
+            msg.voice = voices[3];
+            msg.pitch = 1.1
+            msg.lang = 'hi-IN'
+            msg.text = "Do the boogie woogie  ";
+            msg.rate = 0.7;
+            window.speechSynthesis.speak(msg);
+            
+         setTimeout(function () {document.getElementById("text11").innerHTML="Do the boogie woogie  " }, 33000 );
+         poem13();
+        }
+        
+        </script>
+        <script type="text/javascript">
+            function poem13(){
+             
+             
+                var msg = new SpeechSynthesisUtterance();
+                var voices = window.speechSynthesis.getVoices();
+                msg.voice = voices[3];
+                msg.pitch = 1.1
+                msg.lang = 'hi-IN'
+                msg.text = "And turn yourself around  ";
+                msg.rate = 0.7;
+                window.speechSynthesis.speak(msg);
+                
+             setTimeout(function () {document.getElementById("text12").innerHTML="And turn yourself around   " }, 35000 );
+            poem14();
+            }
+            
+            </script>
+            <script type="text/javascript">
+                function poem14(){
+                 
+                 
+                    var msg = new SpeechSynthesisUtterance();
+                    var voices = window.speechSynthesis.getVoices();
+                    msg.voice = voices[3];
+                    msg.pitch = 1.1
+                    msg.lang = 'hi-IN'
+                    msg.text = "That’s what it’s all about! ";
+                    msg.rate = 0.7;
+                    window.speechSynthesis.speak(msg);
+                    
+                 setTimeout(function () {document.getElementById("text13").innerHTML="That’s what it’s all about! "; document.getElementById('3').style.display='block'}, 38000 );
+                 
+                }
+                
+                </script>
+  </body>
+ 
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,351 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Learning</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- <link href="{{ url_for('static', filename='css/mycss.css') }}"> -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme|Englebert|Jua|Pattaya');
+main{
+  
+  height:auto;
+  max-height: 2200px; 
+  width: 100%;
+  
+  max-width:1570px;
+  
+
+}
+#session{
+font-family: "Kaushan Script", cursive;font-size:20px;
+color: white;
+}
+#home{
+  width: 100%;
+  height:2200px;
+ background-color: rgba(254, 198, 21,0.2)!important;
+  position: relative;
+  
+  
+
+  
+}
+
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(227,158,89,0.2); 
+  color: black;
+  text-align: center;
+ border-style: none !important;
+}
+h1{
+   font-family: 'Englebert', sans-serif;
+        color: black;
+        font-size: 40px;
+  
+}
+h2{
+  color: pink;
+}
+
+#logo{
+height:35px;
+width:40px;
+position:relative;
+top:-7px;
+left:10px;
+}
+.title{
+  width: 400px;
+  height: 120px;
+  border: 5px solid pink;
+  background-color: rgba(255,192,203,0.3);
+}
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 20px;
+}
+th{
+    background-color: palevioletred;
+}
+td{
+    background-color:pink;
+}
+    </style>
+    </head>
+  <body>
+    <main><nav  class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+<img  id="logo" src="{{ url_for('static', filename='img/logo.png') }}" >
+</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><?php  if (isset($_SESSION['username'])) : ?>
+      <p id="session">Welcome <strong><p id="session" name="userdisplay">{% if 'loginusername' in session %}
+  {{ session['loginusername'] }}
+{% endif %}</p></strong></p></strong></p></strong></p>
+      <p> <a  href="{{(url_for('logout'))}}"  class="link" id="session">LOGOUT</a> </p>
+    <?php endif ?></li>
+      </ul>
+<div>
+<div>
+</nav>
+      <section  id="home" class="container-fluid " data-aos="fade-left" data-aos-delay="100">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100">
+        <br><br>
+        <center><div class="title"><h1> Let’s know more about animals.</h1></div> <br>
+          <h2>1. Listen and remember.</h2></center>
+      </div>
+
+      <div id="1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: block;">
+        <center><h4>Click the button below to start.</h4>
+        <button type="button" class="btn btn-info btn-lg" onclick="start()">Click me</button>
+        </div></center>
+      </div>
+
+      <center><div id="2" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        <table>
+            <tr>
+                <th><h3>Animals</h3></th>
+                <th><h3>Shelter</h3></th>
+                <th><h3>Sound</h3></th>
+            </tr>
+            <tr>
+                <td><h4>Hen <img src="{{ url_for('static', filename='img/hen.png') }} " style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Coop <img src="{{ url_for('static', filename='img/coop.png') }}"  style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Cluck</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Horse <img src="{{ url_for('static', filename='img/horse.png') }}"  style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Stable <img src="{{ url_for('static', filename='img/stable.png') }}"  style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Neigh</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Dog <img src="{{ url_for('static', filename='img/dog.png') }}"  style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Kennel <img src="{{ url_for('static', filename='img/kennel.png') }}"  style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Bark</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Lion <img src="{{ url_for('static', filename='img/lion.png') }}"  style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Den <img src="{{ url_for('static', filename='img/den.jpg') }}"  style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Roar</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Elephant<img src="{{ url_for('static', filename='img/elephant.png') }}"  style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Jungle <img src="{{ url_for('static', filename='img/jungle.jpg') }}"  style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Trumpet</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Bee<img src="{{ url_for('static', filename='img/bee.png') }}"  style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Beehive <img src="{{ url_for('static', filename='img/beehive.png') }}"  style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Buzz</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Mouse<img src="{{ url_for('static', filename='img/mouse.png') }}"  style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Hole <img src="{{ url_for('static', filename='img/hole.png') }}"  style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Squeak</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Duck<img src="{{ url_for('static', filename='img/duck.png') }}"  style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Water <img src="{{ url_for('static', filename='img/duckwater.png') }}"  style="width: 40px; height: 40px;"></h4></td>
+                <td><h4>Quack</h4></td>
+            </tr>
+        </table>
+          
+      </div></center>
+      <br><br>
+       <div id="7" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        <center>
+          
+          <a href=""><input type="submit" class="btn btn-primary btn-lg" value="Next"></a>
+          
+        </center>
+      </div>
+    </div>
+    
+  </div>
+</section>
+  
+<!-- <section id="footer">
+  <div class="footer">
+  <p>CopyRight All Rights Reserved</p>
+</div>
+</section> -->
+</main>
+
+   <script src="{{ url_for('static',     filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/bootstrap.min.js') }}"></script>
+    {% block content %}
+    {% endblock %}
+<script type="text/javascript">
+  function start(){
+    setTimeout(function () {document.getElementById('1').style.display='none'; document.getElementById('2').style.display='block'; printpoem() }, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function printpoem(){    
+ setTimeout(function () {var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1;
+    msg.lang = 'hi-IN';
+    msg.text = "Hen lives in a coop and says cluck cluck.  ";
+    msg.rate = 0.6;
+    window.speechSynthesis.speak(msg)}, 1000 ) ;
+ poem2();
+}
+
+</script>
+<script type="text/javascript">
+function poem2(){
+ 
+    setTimeout(function () {var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Horse lives in a stable and says neigh neigh . ";
+    msg.rate = 0.6;
+    window.speechSynthesis.speak(msg)}, 4000 ) ;
+poem3();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem3(){
+ 
+    setTimeout(function () {var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Dog lives in kennel and says bark bark.  ";
+    msg.rate = 0.6;
+    window.speechSynthesis.speak(msg)}, 8000 ) ;
+poem4();
+}
+
+</script>
+<script type="text/javascript">
+function poem4(){
+ 
+    setTimeout(function () {var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Lion lives in den and says roar roar.  ";
+    msg.rate = 0.6;
+    window.speechSynthesis.speak(msg)}, 12000 ) ;
+ poem5();
+}
+
+</script>
+<script type="text/javascript">
+function poem5(){
+    setTimeout(function () {var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Elephant lives in jungle and says Trumpet Trumpet.  ";
+    msg.rate = 0.6;
+    window.speechSynthesis.speak(msg)}, 16000 ) ;
+
+poem6();
+}
+
+</script>
+<script type="text/javascript">
+function poem6(){
+ 
+    setTimeout(function () {var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Bee lives in beehive and says buzz buzz.  ";
+    msg.rate = 0.6;
+    window.speechSynthesis.speak(msg)}, 20000 ) ;
+poem7();
+}
+
+</script>
+<script type="text/javascript">
+function poem7(){
+ 
+    setTimeout(function () {var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Mouse lives in a hole and says Squeak Squeak.  ";
+    msg.rate = 0.6;
+    window.speechSynthesis.speak(msg)}, 24000 ) ;
+poem8();
+}
+
+</script>
+<script type="text/javascript">
+function poem8(){
+ 
+    setTimeout(function () {var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Duck lives in water and says quack quack.  ";
+    msg.rate = 0.6;
+    window.speechSynthesis.speak(msg); document.getElementById('7').style.display='block'}, 28000 ) ;
+
+}
+
+</script>
+
+
+
+  </body>
+ 
+</html>
+
+
+
+
+
+
+
+
+
+
+

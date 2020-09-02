@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Learning</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- <link href="{{ url_for('static', filename='css/mycss.css') }}"> -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme|Englebert|Jua|Pattaya');
+main{
+  
+  height:auto;
+  max-height: 2200px; 
+  width: 100%;
+  
+  max-width:1570px;
+  
+
+}
+#session{
+font-family: "Kaushan Script", cursive;font-size:20px;
+color: white;
+}
+#home{
+  width: 100%;
+  height:2200px;
+ background-color: rgba(254, 198, 21,0.2)!important;
+  position: relative;
+  
+  
+
+  
+}
+
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(227,158,89,0.2); 
+  color: black;
+  text-align: center;
+ border-style: none !important;
+}
+h1{
+   font-family: 'Englebert', sans-serif;
+        color: black;
+        font-size: 40px;
+  
+}
+h2{
+  color: pink;
+}
+
+#logo{
+height:35px;
+width:40px;
+position:relative;
+top:-7px;
+left:10px;
+}
+.title{
+  width: 400px;
+  height: 120px;
+  border: 5px solid pink;
+  background-color: rgba(255,192,203,0.3);
+}
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 20px;
+}
+th{
+    background-color: palevioletred;
+}
+td{
+    background-color:white;
+}
+    </style>
+    </head>
+  <body>
+    <main><nav  class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+<img  id="logo" src="{{ url_for('static', filename='img/logo.png') }}" >
+</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><?php  if (isset($_SESSION['username'])) : ?>
+      <p id="session">Welcome <strong><p id="session" name="userdisplay">{% if 'loginusername' in session %}
+  {{ session['loginusername'] }}
+{% endif %}</p></strong></p></strong></p></strong></p>
+      <p> <a  href="{{(url_for('logout'))}}"  class="link" id="session">LOGOUT</a> </p>
+    <?php endif ?></li>
+      </ul>
+<div>
+<div>
+</nav>
+      <section  id="home" class="container-fluid " data-aos="fade-left" data-aos-delay="100">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100">
+        <br><br>
+        <center><div class="title"><h1>  Know the Occupation.</h1></div> <br>
+          <h2>1. Listen and remember.</h2></center>
+      </div>
+
+      <div id="1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: block;">
+        <center><h4>Click the button below to start.</h4>
+        <button type="button" class="btn btn-info btn-lg" onclick="start()">Click me</button>
+        </div></center>
+      </div>
+
+      <center><div id="2" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        <table>
+            <tr>
+                <th><h3>Occupation</h3></th>
+                <th><h3>Image</h3></th>
+            </tr>
+            <tr>
+                <td><h4>This is Siddhesh. <br>
+                    He is a Mechanic. <br>
+                    He uses a spanner. <br>
+                    He uses a screw-driver. <br>
+                    He repairs machines.
+                </h4></td>
+                <td><h4>Mechanic <img src="{{ url_for('static', filename='img/mechanic.png') }}"  style="width: 60px; height: 60px;"></h4></td>
+            </tr>
+            <tr>
+                <td><h4>This is Abdul. <br>
+                    He is a Carpenter. <br>
+                    He uses a saw.  <br>
+                    He uses a tape-measure. <br>   
+                    He makes things from wood. 
+
+                </h4></td>
+                <td><h4>Carpenter <img src="{{ url_for('static', filename='img/carpenter.png') }}"  style="width: 60px; height: 60px;"></h4></td>
+            </tr>
+            <tr>
+                <td><h4>This is Pranali. <br>
+                    She is a Manager. <br>
+                    She uses a computer. <br>
+                    She uses a projector. <br>
+                    She works in an office.
+                </h4></td>
+                <td><h4>Manager <img src="{{ url_for('static', filename='img/manager2.png') }}"  style="width: 60px; height: 60px;"></h4></td>
+            </tr>
+            <tr>
+                <td><h4>This is Kishor. <br>
+                    He is a Traffic-police. <br>
+                    He uses a whistle. <br>
+                    He uses a baton. <br>
+                    He directs traffic. <br>
+                </h4></td>
+                <td><h4>Traffic-police <img src="{{ url_for('static', filename='img/police.png') }}"  style="width: 60px; height: 60px;"></h4></td>
+            </tr>
+            <tr>
+                <td><h4>This is Siya. <br>
+                    She is a Chef. <br>
+                    She  works in the kitchen. <br> 
+                    She uses pots, pans, knives and spoons. <br> 
+                    She cooks tasty food. <br>
+
+                </h4></td>
+                <td><h4>Chef <img src="{{ url_for('static', filename='img/chef.png') }}"  style="width: 60px; height: 60px;"></h4></td>
+            </tr>
+            <tr>
+                <td><h4>This is Varsha. <br>
+                    She is a Singer. <br>
+                    She uses tanpura to practise. <br>
+                    She uses tabla for rhythm. <br>
+                    She sings sweet songs. <br>
+                </h4></td>
+                <td><h4>Singer <img src="{{ url_for('static', filename='img/singer.png') }}"  style="width: 60px; height: 60px;"></h4></td>
+            </tr>
+        </table>
+          
+      </div></center>
+      <br><br>
+       <div id="7" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        <center>
+          
+          <a href=""><input type="submit" class="btn btn-primary btn-lg" value="Next"></a>
+          
+        </center>
+      </div>
+    </div>
+    
+  </div>
+</section>
+  
+<!-- <section id="footer">
+  <div class="footer">
+  <p>CopyRight All Rights Reserved</p>
+</div>
+</section> -->
+</main>
+
+   <script src="{{ url_for('static',     filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/bootstrap.min.js') }}"></script>
+    {% block content %}
+    {% endblock %}
+<script type="text/javascript">
+  function start(){
+    setTimeout(function () {document.getElementById('1').style.display='none'; document.getElementById('2').style.display='block'; printpoem() }, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function printpoem(){    
+ setTimeout(function () {var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1;
+    msg.lang = 'hi-IN';
+    msg.text = "This is Siddhesh. He is a Mechanic. He uses a spanner. He uses a screw-driver. He repairs machines.";
+    msg.rate = 0.6;
+    window.speechSynthesis.speak(msg)}, 1000 ) ;
+ poem3();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem3(){
+ 
+    setTimeout(function () {var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "This is Abdul. He is a Carpenter. He uses a saw.  He uses a tape-measure.   He makes things from wood.  ";
+    msg.rate = 0.6;
+    window.speechSynthesis.speak(msg)}, 16000 ) ;
+poem4();
+}
+
+</script>
+<script type="text/javascript">
+function poem4(){
+ 
+    setTimeout(function () {var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "This is Pranali. She is a Manager. She uses a computer. She uses a projector. She works in an office.  ";
+    msg.rate = 0.6;
+    window.speechSynthesis.speak(msg)}, 24000 ) ;
+ poem5();
+}
+
+</script>
+<script type="text/javascript">
+function poem5(){
+    setTimeout(function () {var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "This is Kishor. He is a Traffic-police. He uses a whistle. He uses a baton. He directs traffic.  ";
+    msg.rate = 0.6;
+    window.speechSynthesis.speak(msg)}, 32000 ) ;
+
+poem6();
+}
+
+</script>
+<script type="text/javascript">
+function poem6(){
+ 
+    setTimeout(function () {var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "This is Siya. She is a Chef. She  works in the kitchen. She uses pots, pans, knives and spoons. She cooks tasty food. ";
+    msg.rate = 0.6;
+    window.speechSynthesis.speak(msg)}, 40000 ) ;
+poem7();
+}
+
+</script>
+<script type="text/javascript">
+function poem7(){
+ 
+    setTimeout(function () {var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "This is Varsha. She is a Singer. She uses tanpura to practise. She uses tabla for rhythm. She sings sweet songs.  ";
+    msg.rate = 0.6;
+    window.speechSynthesis.speak(msg); document.getElementById('7').style.display='block'}, 48000 ) ;
+
+}
+
+</script>
+
+
+
+  </body>
+ 
+</html>
+
+
+
+
+
+
+
+
+
+
+

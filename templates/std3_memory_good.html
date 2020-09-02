@@ -1,0 +1,257 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Learning</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- <link href="{{ url_for('static', filename='css/mycss.css') }}"> -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme|Englebert|Jua|Pattaya');
+main{
+  
+  height:auto;
+  max-height: 2200px; 
+  width: 100%;
+  
+  max-width:1570px;
+  
+
+}
+#session{
+font-family: "Kaushan Script", cursive;font-size:20px;
+color: white;
+}
+#home{
+  width: 100%;
+  height:2200px;
+ background-color: rgba(254, 198, 21,0.2)!important;
+  position: relative;
+  
+  
+
+  
+}
+
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(227,158,89,0.2); 
+  color: black;
+  text-align: center;
+ border-style: none !important;
+}
+h1{
+   font-family: 'Englebert', sans-serif;
+        color: black;
+        font-size: 40px;
+  
+}
+h2{
+  color: pink;
+}
+
+#logo{
+height:35px;
+width:40px;
+position:relative;
+top:-7px;
+left:10px;
+}
+.title{
+  width: 400px;
+  height: 120px;
+  border: 5px solid pink;
+  background-color: rgba(255,192,203,0.3);
+}
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 20px;
+}
+th{
+    background-color: palevioletred;
+}
+td{
+    background-color:white;
+}
+    </style>
+    </head>
+  <body>
+    <main><nav  class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+<img  id="logo" src="{{ url_for('static', filename='img/logo.png') }}" >
+</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><?php  if (isset($_SESSION['username'])) : ?>
+      <p id="session">Welcome <strong><p id="session" name="userdisplay">{% if 'loginusername' in session %}
+  {{ session['loginusername'] }}
+{% endif %}</p></strong></p></strong></p></strong></p>
+      <p> <a  href="{{(url_for('logout'))}}"  class="link" id="session">LOGOUT</a> </p>
+    <?php endif ?></li>
+      </ul>
+<div>
+<div>
+</nav>
+      <section  id="home" class="container-fluid " data-aos="fade-left" data-aos-delay="100">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100">
+        <br><br>
+        <center><div class="title"><h1>At the Market .</h1></div> <br>
+          <h2>1. Listen and remember.</h2></center>
+      </div>
+
+      <div id="1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: block;">
+        <center><h4>Click the button below to start.</h4>
+        <button type="button" class="btn btn-info btn-lg" onclick="start()">Click me</button>
+        </div></center>
+      </div>
+
+      <center><div id="2" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        <table>
+            <tr>
+                <th><h3>Description</h3></th>
+                <th><h3>Image</h3></th>
+            </tr>
+            <tr>
+                <td><h4> <strong>  A </strong>: Good morning, grandmother . <br>
+                  <strong>  B </strong> : I want to buy 
+                    rice for the whole year. <br>
+                    Show me the varieties
+                    you have and tell me the prices. <br>
+                    <strong>  A </strong>: Grandmother , this variety is good . <br>
+                    Don't worry about the price. <br>
+                    It is not very costly. <br>
+                    <button class="btn btn-lg" onclick="start1()">Hear it</button>
+                </h4></td>
+                <td><h4><img src="{{ url_for('static', filename='img/pic1.png') }}"  style="width: 200px; height: 200px;"></h4></td>
+            </tr>
+            <tr>
+              <td><h4> <strong>  A </strong>: Grandpa, the bubbles look so lovely ! . <br>
+                  Can we buy the bubble-maker ? <br>
+                  <strong>  B </strong> : Why not ? 
+                  Let's buy three <br>
+                  Two for you children and one for me ! <br>
+                  <button class="btn btn-lg" onclick="start2()">Hear it</button>
+              </h4></td>
+              <td><h4><img src="{{ url_for('static', filename='img/pic2.png') }}"  style="width: 200px; height: 200px;"></h4></td>
+          </tr>
+          <tr>
+            <td><h4> <strong>  A </strong>: Have you tried these cakes ? <br>
+                They're so delicious <br>
+                <strong>  B </strong> : This is a new cake shop is it ?<br> 
+                But I'm not very fond of cakes <br>
+                <button class="btn btn-lg" onclick="start3()">Hear it</button>
+            </h4></td>
+            <td><h4><img src="{{ url_for('static', filename='img/pic3.png') }}"  style="width: 200px; height: 200px;"></h4></td>
+        </tr>
+            
+        </table>
+          
+      </div></center>
+      <br><br>
+       <div id="7" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        <center>
+          
+          <a href="{{(url_for('std3memorygood'))}}"><input type="submit" class="btn btn-primary btn-lg" value="Next"></a>
+          
+        </center>
+      </div>
+    </div>
+    
+  </div>
+</section>
+  
+<!-- <section id="footer">
+  <div class="footer">
+  <p>CopyRight All Rights Reserved</p>
+</div>
+</section> -->
+</main>
+
+   <script src="{{ url_for('static',     filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/bootstrap.min.js') }}"></script>
+    {% block content %}
+    {% endblock %}
+<script type="text/javascript">
+  function start(){
+    setTimeout(function () {document.getElementById('1').style.display='none'; document.getElementById('2').style.display='block' }, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function start1(){  
+  var inputmsg="Speaker 1 says  Good morning, grandmother. Speaker 2 says I want to buy rice for the whole year.  Show me the varietiesyou have and tell me the prices. Speaker 2 replies Grandmother , this variety is good . Don't worry about the price.  It is not very costly. ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    window.speechSynthesis.speak(msg);  
+}
+
+</script>
+
+<script type="text/javascript">
+function start2(){
+ 
+  var inputmsg=" Speaker 1 says Grandpa, the bubbles look so lovely ! Can we buy the bubble-maker ? Speaker 2 replies  Why not ? Let's buy three , Two for you children and one for me !  "
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    window.speechSynthesis.speak(msg); 
+    
+   
+
+}
+
+</script>
+<script type="text/javascript">
+function start3(){
+ 
+  var inputmsg= "Speaker 1 says Have you tried these cakes ? They're so delicious . Speaker 2 replies This is a new cake shop is it ? But I'm not very fond of cakes.  ";
+    var msg = new SpeechSynthesisUtterance(inputmsg);
+    window.speechSynthesis.speak(msg);
+    
+    
+    setTimeout(function () { document.getElementById('7').style.display='block'}, 1000 ) ;
+ 
+}
+
+</Script>
+
+
+
+  </body>
+ 
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,605 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Learning</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- <link href="{{ url_for('static', filename='css/mycss.css') }}"> -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme|Englebert|Jua|Pattaya');
+main{
+  
+  height:auto;
+  max-height: 2200px; 
+  width: 100%;
+  
+  max-width:1570px;
+  
+
+}
+#session{
+font-family: "Kaushan Script", cursive;font-size:20px;
+color: white;
+}
+#home{
+  width: 100%;
+  height:2200px;
+ background-color: rgba(254, 198, 21,0.2)!important;
+  position: relative;
+  
+  
+
+  
+}
+
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(227,158,89,0.2); 
+  color: black;
+  text-align: center;
+ border-style: none !important;
+}
+h1{
+   font-family: 'Englebert', sans-serif;
+        color: black;
+        font-size: 40px;
+  
+}
+
+
+#logo{
+height:35px;
+width:40px;
+position:relative;
+top:-7px;
+left:10px;
+}
+.title{
+  width: 400px;
+  height: 100px;
+  border: 5px solid pink;
+  background-color: rgba(255,192,203,0.3);
+}
+ .shape{
+        font-family: 'Staatliches', cursive;
+        color: black;
+        font-size: 20px;
+        width: 30px;
+        height:30px;
+      }
+    </style>
+    </head>
+  <body>
+    <main><nav  class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+<img  id="logo" src="{{ url_for('static', filename='img/logo.png') }}" >
+</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><?php  if (isset($_SESSION['username'])) : ?>
+      <p id="session">Welcome <strong><p id="session" name="userdisplay">{% if 'loginusername' in session %}
+  {{ session['.loginusername'] }}
+{% endif %}</p></strong></p></strong></p></strong></p>
+      <p> <a  href="{{(url_for('logout'))}}"  class="link" id="session">LOGOUT</a> </p>
+    <?php endif ?></li>
+      </ul>
+<div>
+<div>
+</nav>
+      <section  id="home" class="container-fluid " data-aos="fade-left" data-aos-delay="100">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100">
+        <br><br>
+        <center><div class="title"><h1>Spelling.</h1></div> <br>
+          <h2>1.Write Correct Spelling.</h2></center>
+      </div>
+<form method="POST" action="{{(url_for('std4weektest'))}}">
+      <div id="2" class="col-lg-4 col-md-4 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" >
+          
+          <h4>A&nbsp;&nbsp;<input type="text" class="shape" id="ans1">&nbsp;&nbsp;<input type="text" class="shape" id="ans2">&nbsp;&nbsp;<input type="text" class="shape" id="ans3" >&nbsp;&nbsp;<input type="text" class="shape" id="ans4" >&nbsp;&nbsp;<input type="text" class="shape" id="ans5" >&nbsp;&nbsp;<input type="text" class="shape" id="ans6">&nbsp;&nbsp;<input type="text" class="shape" id="ans7">&nbsp;&nbsp;<input type="text" class="shape" id="ans8">&nbsp;&nbsp;<input type="text" class="shape" id="ans9">&nbsp;&nbsp;<img src="{{ url_for('static', filename='img/accomplish.jpg') }}" style="width: 100px; height: 100px;"></h4>
+           
+      </div>
+      <div id="2" class="col-lg-4 col-md-4 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" >
+          
+          <h4>B&nbsp;&nbsp;<input type="text" class="shape" id="ans21">&nbsp;&nbsp;<input type="text" class="shape" id="ans22">&nbsp;&nbsp;<input type="text" class="shape" id="ans23" >&nbsp;&nbsp;<input type="text" class="shape" id="ans24" >&nbsp;&nbsp;<input type="text" class="shape" id="ans25" >&nbsp;&nbsp;<input type="text" class="shape" id="ans26" >&nbsp;&nbsp;<input type="text" class="shape" id="ans27">&nbsp;&nbsp;<img src="{{ url_for('static', filename='img/begrudge.jpg') }}" style="width: 100px; height: 100px;"></h4>
+           
+      </div>
+      <div id="2" class="col-lg-4 col-md-4 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" >
+          
+          <h4>C&nbsp;&nbsp;<input type="text" class="shape" id="ans31">&nbsp;&nbsp;<input type="text" class="shape" id="ans32">&nbsp;&nbsp;<input type="text" class="shape" id="ans33" >&nbsp;&nbsp;<input type="text" class="shape" id="ans34" >&nbsp;&nbsp;<input type="text" class="shape" id="ans35" >&nbsp;&nbsp;<input type="text" class="shape" id="ans36">&nbsp;&nbsp;<input type="text" class="shape" id="ans37">&nbsp;&nbsp;<img src="{{ url_for('static', filename='img/crucible.jpg') }}" style="width: 100px; height: 100px;"></h4>
+           
+      </div>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100">
+        <br><br>
+        <center><div class="title"><h1>Memory.</h1></div> <br>
+          <h2>1. Write Correct Answer. </h2>
+          <h3>Questions from "At the market" </h3>
+        </center>
+      </div>
+
+      <div id="2" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" >
+          
+          <h3>Swaraj is my birthright and I will have it. who said this ?</h3>
+          <br><h4><input type="radio" name="q1" value="true" ><span >Lokmanya Bal Gangadhar Tilak.</span></h4> 
+          <br><h4><input type="radio" name="q1" value="false"><span >Ramalinga Swamigal.</span></h4> 
+           
+      </div>
+
+      <div id="2" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" >
+          
+          <h3> Who started the first school for girls in Pune in 1848 ?</h3>
+          <br><h4><input type="radio" name="q2" value="false2" ><span >Mother Teresa.</span></h4> 
+          <br><h4><input type="radio" name="q2" value="true2"><span >Savitribai Phule.</span></h4> 
+           
+      </div>
+
+
+
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100">
+        <br><br>
+        <center><div class="title"><h1>Reading.</h1></div> <br>
+          <h2>1. Speak the given words. </h2>
+        </center>
+      </div>
+ <div id="2" class="col-lg-4 col-md-4 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" >
+          
+          <h2 id="myDIV">1)plural of ox should be oxen, not oxes.</h2>
+      <input type="hidden" rows="10"  id="textbox" >
+      <br><br>
+      <button type="button" class="btn btn-primary btn-lg"  id="start-btn"  onclick="myFunction()">Start</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-lg"  id="stop-btn" >Stop</button>
+           
+      </div>
+
+<div id="2" class="col-lg-4 col-md-4 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" >
+          
+          <h2 id="myDIV">2)The masculine pronouns are he,his and him</h2>
+      <input type="hidden" rows="10"  id="textbox1" >
+      <br><br>
+      <button type="button" class="btn btn-primary btn-lg"  id="start-btn1"  onclick="myFunction1()">Start</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-lg"  id="stop-btn1" >Stop</button>
+           
+      </div>
+
+<div id="2" class="col-lg-4 col-md-4 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" >
+          
+          <h2 id="myDIV">3)The trickiest language you ever did see </h2>
+      <input type="hidden" rows="10"  id="textbox2" >
+      <br><br>
+      <button type="button" class="btn btn-primary btn-lg"  id="start-btn2"  onclick="myFunction2()">Start</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-lg"  id="stop-btn2" >Stop</button>
+           
+      </div>
+<input type="hidden" name="result1" id="data1">
+<input type="hidden" name="result2" id="data2">
+<input type="hidden" name="result3" id="data3">
+<input type="hidden" name="resultmem1" id="datamem1">
+<input type="hidden" name="resultmem2" id="datamem2">
+<input type="hidden" name="resultspell1" id="dataspell1">
+<input type="hidden" name="resultspell2" id="dataspell2">
+<input type="hidden" name="resultspell3" id="dataspell3">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100">
+        <br><br><br><br>
+        <center>
+          <input type="submit" class="btn btn-primary btn-lg" value="Submit all Answers"  onclick="getreading()" >
+        </center>
+      </div>
+
+  </form>
+
+
+
+    </div>
+    
+  </div>
+</section>
+  
+<!-- <section id="footer">
+  <div class="footer">
+  <p>CopyRight All Rights Reserved</p>
+</div>
+</section> -->
+</main>
+
+   <script src="{{ url_for('static',     filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/bootstrap.min.js') }}"></script>
+    {% block content %}
+    {% endblock %}
+<script type="text/javascript">
+   function myFunction(){
+
+var SpeechRecognition = window.webkitSpeechRecognition;
+  
+var recognition = new SpeechRecognition();
+ 
+var Textbox = $('#textbox');
+var instructions = $('instructions');
+ 
+var Content = '';
+ 
+recognition.continuous = true;
+ 
+recognition.onresult = function(event) {
+ 
+  var current = event.resultIndex;
+ 
+  var transcript = event.results[current][0].transcript;
+ 
+    Content += transcript;
+    Textbox.val(Content);
+  
+};
+ 
+recognition.onstart = function() { 
+  instructions.text('Voice recognition is ON.');
+}
+ 
+recognition.onspeechend = function() {
+  instructions.text('No activity.');
+}
+ 
+recognition.onerror = function(event) {
+  if(event.error == 'no-speech') {
+    instructions.text('Try again.');  
+  }
+}
+ 
+$('#start-btn').on('click', function(e) {
+  if (Content.length) {
+    Content += ' ';
+  }
+  recognition.start();
+});
+ $('#stop-btn').on('click', function(e) {
+  if (Content.length) {
+    Content += ' ';
+  }
+  recognition.stop();
+});
+
+Textbox.on('input', function() {
+  Content = $(this).val();
+})
+   }
+</script>
+
+
+
+<script type="text/javascript">
+   function myFunction1(){
+
+var SpeechRecognition = window.webkitSpeechRecognition;
+  
+var recognition = new SpeechRecognition();
+ 
+var Textbox = $('#textbox1');
+var instructions = $('instructions');
+ 
+var Content = '';
+ 
+recognition.continuous = true;
+ 
+recognition.onresult = function(event) {
+ 
+  var current = event.resultIndex;
+ 
+  var transcript = event.results[current][0].transcript;
+ 
+    Content += transcript;
+    Textbox.val(Content);
+  
+};
+ 
+recognition.onstart = function() { 
+  instructions.text('Voice recognition is ON.');
+}
+ 
+recognition.onspeechend = function() {
+  instructions.text('No activity.');
+}
+ 
+recognition.onerror = function(event) {
+  if(event.error == 'no-speech') {
+    instructions.text('Try again.');  
+  }
+}
+ 
+$('#start-btn1').on('click', function(e) {
+  if (Content.length) {
+    Content += ' ';
+  }
+  recognition.start();
+});
+ $('#stop-btn1').on('click', function(e) {
+  if (Content.length) {
+    Content += ' ';
+  }
+  recognition.stop();
+});
+
+Textbox.on('input', function() {
+  Content = $(this).val();
+})
+   }
+</script>
+
+
+<script type="text/javascript">
+   function myFunction2(){
+
+var SpeechRecognition = window.webkitSpeechRecognition;
+  
+var recognition = new SpeechRecognition();
+ 
+var Textbox = $('#textbox2');
+var instructions = $('instructions');
+ 
+var Content = '';
+ 
+recognition.continuous = true;
+ 
+recognition.onresult = function(event) {
+ 
+  var current = event.resultIndex;
+ 
+  var transcript = event.results[current][0].transcript;
+ 
+    Content += transcript;
+    Textbox.val(Content);
+  
+};
+ 
+recognition.onstart = function() { 
+  instructions.text('Voice recognition is ON.');
+}
+ 
+recognition.onspeechend = function() {
+  instructions.text('No activity.');
+}
+ 
+recognition.onerror = function(event) {
+  if(event.error == 'no-speech') {
+    instructions.text('Try again.');  
+  }
+}
+ 
+$('#start-btn2').on('click', function(e) {
+  if (Content.length) {
+    Content += ' ';
+  }
+  recognition.start();
+});
+ $('#stop-btn2').on('click', function(e) {
+  if (Content.length) {
+    Content += ' ';
+  }
+  recognition.stop();
+});
+
+Textbox.on('input', function() {
+  Content = $(this).val();
+})
+   }
+</script>
+
+
+<script type="text/javascript">
+  function getreading() {
+    var ans1=document.getElementById("textbox").value;
+    if (ans1=="plural of ox should be oxen not oxes") {
+      var ques1="correct";
+    }
+    else{
+      var ques1="wrong";
+    }
+    //alert(ques1);
+    getans2();
+    document.getElementById("data1").value=ques1;
+  }
+</script>
+<script type="text/javascript">
+  function getans2() {
+    var ans2=document.getElementById("textbox1").value;
+    if (ans2=="the masculine pronouns are he his and him") {
+      var ques2="correct";
+    }
+    else{
+      var ques2="wrong";
+    }
+    //alert(ques2);
+    getans3();
+    document.getElementById("data2").value=ques2;
+  }
+</script>
+
+<script type="text/javascript">
+  function getans3() {
+    var ans3=document.getElementById("textbox2").value;
+    if (ans3=="the trickiest language you ever did see ") {
+      var ques3="correct";
+    }
+    else{
+      var ques3="wrong";
+    }
+    //alert(ques3);
+    getansmem1();
+    document.getElementById("data3").value=ques3;
+  }
+</script>
+<script type="text/javascript">
+function getansmem1() 
+{
+  
+ 
+var ans4=($("input[name=q1]:checked").val());
+
+
+
+if(ans4=="true"){
+  var result3="correct";
+}
+else{
+  var result3="wrong";
+}
+
+//alert(result3);
+getansmem2();
+document.getElementById("datamem1").value=result3;
+}
+
+
+</script>
+<script type="text/javascript">
+function getansmem2() 
+{
+  
+ 
+var ans4=($("input[name=q2]:checked").val());
+
+
+
+if(ans4=="true2"){
+  var result3="correct";
+}
+else{
+  var result3="wrong";
+}
+
+//alert(result3);
+ getansspell1();
+document.getElementById("datamem2").value=result3;
+}
+
+
+</script>
+
+
+<script type="text/javascript">
+function getansspell1() 
+{
+  // alert("hello");
+ var ans1=document.getElementById("ans1").value;
+ var ans2=document.getElementById("ans2").value;
+var ans3=document.getElementById("ans3").value;
+ var ans4=document.getElementById("ans4").value;
+ var ans5=document.getElementById("ans5").value;
+ var ans6=document.getElementById("ans6").value;
+ var ans7=document.getElementById("ans7").value;
+ var ans8=document.getElementById("ans8").value;
+ var ans9=document.getElementById("ans9").value;
+var ans10 = ans1+ans2+ans3+ans4+ans5+ans6+ans7+ans8+ans9;
+if(ans10="ccomplish"){
+  var result1="correct";
+}
+else{
+  var result1="wrong";
+}
+
+//alert(result1);
+getansspell2();
+document.getElementById("dataspell1").value=result1;
+}
+
+
+</script>
+<script type="text/javascript">
+function getansspell2() 
+{
+  //alert("hello");
+ var ans1=document.getElementById("ans21").value;
+ var ans2=document.getElementById("ans22").value;
+var ans3=document.getElementById("ans23").value;
+var ans4=document.getElementById("ans24").value;
+var ans5=document.getElementById("ans25").value;
+var ans6=document.getElementById("ans26").value;
+var ans7=document.getElementById("ans27").value;
+// alert("hello");
+var ans8 = ans1+ans2+ans3+ans4+ans5+ans6+ans7;
+
+if(ans8=="egrudge"){
+  var result1="correct";
+}
+else{
+  var result1="wrong";
+}
+
+// alert(result1);
+getansspell3();
+document.getElementById("dataspell2").value=result1;
+}
+
+
+</script>
+<script type="text/javascript">
+function getansspell3() 
+{
+  // alert("hello");
+ 
+ 
+
+var ans1= document.getElementById("ans31").value;
+var ans2= document.getElementById("ans32").value;
+var ans3=document.getElementById("ans33").value;
+ var ans4=document.getElementById("ans34").value;
+ var ans5=document.getElementById("ans35").value;
+ var ans6=document.getElementById("ans36").value;
+ var ans7=document.getElementById("ans37").value;
+
+ 
+
+var ans8= ans1+ans2+ans3+ans4+ans5+ans6+ans7;
+// alert(ans8);
+if(ans8=="rucible"){
+  var result1="correct";
+}
+else{
+  var result1="wrong";
+}
+
+// alert(result1);
+
+document.getElementById("dataspell3").value=result1;
+}
+
+
+</script>
+
+  </body>
+ 
+</html>
+
+
+
+
+
+
+
+
+
+
+

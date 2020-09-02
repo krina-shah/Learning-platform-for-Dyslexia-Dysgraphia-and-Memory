@@ -1,0 +1,599 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Learning</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- <link href="{{ url_for('static', filename='css/mycss.css') }}"> -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme|Englebert|Jua|Pattaya');
+main{
+  
+  height:auto;
+  max-height: 2200px; 
+  width: 100%;
+  
+  max-width:1570px;
+  
+
+}
+#session{
+font-family: "Kaushan Script", cursive;font-size:20px;
+color: white;
+}
+#home{
+  width: 100%;
+  height:2200px;
+ background-color: rgba(254, 198, 21,0.2)!important;
+  position: relative;
+  
+  
+
+  
+}
+
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(227,158,89,0.2); 
+  color: black;
+  text-align: center;
+ border-style: none !important;
+}
+h1{
+   font-family: 'Englebert', sans-serif;
+        color: black;
+        font-size: 40px;
+  
+}
+h2{
+  color: pink;
+}
+
+#logo{
+height:35px;
+width:40px;
+position:relative;
+top:-7px;
+left:10px;
+}
+.title{
+  width: 400px;
+  height: 100px;
+  border: 5px solid pink;
+  background-color: rgba(255,192,203,0.3);
+}
+    </style>
+    </head>
+  <body>
+    <main><nav  class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+<img  id="logo" src="{{ url_for('static', filename='img/logo.png') }}" >
+</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><?php  if (isset($_SESSION['username'])) : ?>
+      <p id="session">Welcome <strong><p id="session" name="userdisplay">{% if 'loginusername' in session %}
+  {{ session['loginusername'] }}
+{% endif %}</p></strong></p></strong></p></strong></p>
+      <p> <a  href="{{(url_for('logout'))}}"  class="link" id="session">LOGOUT</a> </p>
+    <?php endif ?></li>
+      </ul>
+<div>
+<div>
+</nav>
+      <section  id="home" class="container-fluid " data-aos="fade-left" data-aos-delay="100">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100">
+        <br><br>
+        <center><div class="title"><h1> Surprise Birthday Party.</h1></div> <br>
+          <h2>1. Listen and remember.</h2></center>
+      </div>
+
+      <div id="1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: block;">
+        <center><h4>Click the button below to start.</h4>
+        <button type="button" class="btn btn-info btn-lg" onclick="start()">Click me</button>
+        </div></center>
+      </div>
+
+      <div id="2" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        
+          
+          <h3 id="text"></h3>
+          <h3 id="text1"></h3>
+         
+          
+           
+      </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <img id="image1" style="width: 300px; height: 200px; display:none;" >
+        </div>
+        <br>
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <img id="image2" style="width: 300px; height: 200px; display:none;" >
+        </div>
+        <div id="3" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+           <h3 id="text2"></h3>
+          <h3 id="text3"></h3>
+          <h3 id="text4"></h3>
+          <h3 id="text5"></h3>
+          
+          
+           
+      </div>
+      <div id="4" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        
+          <h3 id="text6"></h3>
+          <h3 id="text7"></h3>
+          <h3 id="text8"></h3>
+          <h3 id="text9"></h3>
+          
+           
+      </div>
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <img id="image3" style="width: 400px; height: 300px; display:none;" >
+        </div>
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <br> <br>
+        </div>
+        
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <br> <br>
+        </div>
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+         <img id="image4" style="width: 300px; height: 200px; display:none;" >
+        </div>
+          <div id="5" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+         
+          <h3 id="text10"></h3>
+          <h3 id="text11"></h3>
+          <h3 id="text12"></h3>
+         
+           
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <br> <br>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <br> <br>
+        </div>
+           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <br> <br>
+        </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+         <img id="image5" style="width: 300px; height: 200px; display:none;" >
+        </div>
+     <div id="6" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+         
+          <h3 id="text13"></h3>
+          <h3 id="text14"></h3>
+          <h3 id="text14a"></h3>
+          <h3 id="text14b"></h3>
+          <h3 id="text14c"></h3>
+          <h3 id="text15"></h3>
+           
+      </div>
+       <div id="7" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenthome" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+        <center>
+          
+          <a href="{{(url_for('std1memorygood'))}}"><input type="submit" class="btn btn-primary btn-lg" value="Next"></a>
+          
+        </center>
+      </div>
+    </div>
+    
+  </div>
+</section>
+  
+<!-- <section id="footer">
+  <div class="footer">
+  <p>CopyRight All Rights Reserved</p>
+</div>
+</section> -->
+</main>
+
+   <script src="{{ url_for('static',     filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static',     filename='js/bootstrap.min.js') }}"></script>
+    {% block content %}
+    {% endblock %}
+<script type="text/javascript">
+  function start(){
+    setTimeout(function () {document.getElementById('1').style.display='none'; document.getElementById('2').style.display='block'; printpoem()}, 1.000 ) ;
+  }
+</script>
+<script type="text/javascript">
+function printpoem(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "There was a monkey named Manku.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text").innerHTML="There was a monkey named Manku.  "; document.getElementById('image1').style.display='block';
+ document.getElementById("image1").src = "{{ url_for('static', filename='img/std1mem1.png') }}"}, 1000 ) ;
+poem2();
+}
+
+</script>
+<script type="text/javascript">
+function poem2(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Manku lived in a cave.";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text1").innerHTML=" Manku lived in a cave."}, 5000 ) ;
+poem3();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem3(){
+ 
+ setTimeout(function () { document.getElementById('3').style.display='block'; }, 1.000 ) ;
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "A lake was near the cave.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text2").innerHTML="A lake was near the cave.  "; document.getElementById('image2').style.display='block';
+ document.getElementById("image2").src = "{{ url_for('static', filename='img/std1mem2.png') }}"}, 7000 ) ;
+poem4();
+}
+
+</script>
+<script type="text/javascript">
+function poem4(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Ducky, the drake and his sister Lucky lived in the lake. ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text3").innerHTML="Ducky, the drake and his sister Lucky lived in the lake. "}, 10000 ) ;
+ poem5();
+}
+
+</script>
+<script type="text/javascript">
+function poem5(){
+ 
+
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Jin and Jenny, the cranes lived near the lake. ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text4").innerHTML="Jin and Jenny, the cranes lived near the lake.  "}, 15000 );
+poem6();
+}
+
+</script>
+<script type="text/javascript">
+function poem6(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "All of them were Manku’s friends. They loved to play together. ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text5").innerHTML="All of them were Manku’s friends. They loved to play together. "}, 21000 );
+poem7();
+}
+
+</script>
+<script type="text/javascript">
+function poem7(){
+ 
+ setTimeout(function () { document.getElementById('4').style.display='block'; }, 1.000 ) ;
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "One day Manku became very happy.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text6").innerHTML=" One day Manku became very happy. " ; document.getElementById('image3').style.display='block';
+ document.getElementById("image3").src = "{{ url_for('static', filename='img/std1mem3.png') }}"}, 27000 );
+poem8();
+}
+
+</script>
+<script type="text/javascript">
+function poem8(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "“ Oh ! Tomorrow is Sunday and Sunday is my birthday.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text7").innerHTML="“ Oh ! Tomorrow is Sunday and Sunday is my birthday. "}, 31000 );
+poem9();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem9(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Ducky, Lucky, Jin and Jenny will come to say, Happy Birthday”, thought Manku.    ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text8").innerHTML="Ducky, Lucky, Jin and Jenny will come to say, Happy Birthday”, thought Manku.   "}, 36000 );
+poem10();
+}
+
+</script>
+<script type="text/javascript">
+function poem10(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Soon it was Sunday. Manku waited for a long time for hours and hours. But no one came. So he felt very sad. ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text9").innerHTML="Soon it was Sunday. Manku waited for a long time for hours and hours. But no one came. So he felt very sad. "}, 43000 );
+poem11();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem11(){
+ 
+ setTimeout(function () { document.getElementById('5').style.display='block'; }, 1.000 ) ;
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Manku went to the lake. But no one was there.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text10").innerHTML="Manku went to the lake. But no one was there. " ; document.getElementById('image4').style.display='block';
+ document.getElementById("image4").src = "{{ url_for('static', filename='img/std1mem4.png') }}"}, 54000 );
+poem12();
+}
+
+</script>
+<script type="text/javascript">
+function poem12(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "“So sadly Manku came back to his cave. Manku was surprised to see the cake on the table.   ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text11").innerHTML="“So sadly Manku came back to his cave. Manku was surprised to see the cake on the table. "}, 58000 );
+poem13();
+}
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+function poem13(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "“Wow! A cake!” said Manku.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () { document.getElementById("text12").innerHTML="“Wow! A cake!” said Manku.  "   }, 67000 );
+poem14();
+}
+
+</script>
+<script type="text/javascript">
+function poem14(){
+ 
+ setTimeout(function () { document.getElementById('6').style.display='block'; }, 1.000 ) ;
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "Ducky, Lucky, Jin and Jenny came out and shouted, ‘‘ Happy Birthday to you… Happy Birthday dear, Manku.” ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text13").innerHTML="Ducky, Lucky, Jin and Jenny came out and shouted, ‘‘ Happy Birthday to you… Happy Birthday dear, Manku.”" ; document.getElementById('image5').style.display='block';
+ document.getElementById("image5").src = "{{ url_for('static', filename='img/std1mem5.png') }}"}, 71000 );
+poem15();
+}
+
+</script>
+
+<script type="text/javascript">
+function poem15(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = " We were waiting to give you a surprise”,  all said.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text14").innerHTML="  We were waiting to give you a surprise”,  all said. "}, 80000 );
+poem16();
+}
+
+</script>
+<script type="text/javascript">
+function poem16(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = " “ I baked cake for you”, said Jin. ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text14a").innerHTML="   “ I baked cake for you”, said Jin."}, 84000 );
+poem17();
+}
+
+
+</script>
+<script type="text/javascript">
+function poem17(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = " “ I bought you some grapes,” said Jenny.";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text14b").innerHTML=" “ I bought you some grapes,” said Jenny. "}, 88000 );
+poem18();
+}
+
+</script>
+<script type="text/javascript">
+function poem18(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "  “ And we have made this table for you”, said Ducky and Lucky. ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text14c").innerHTML=" “ And we have made this table for you”, said Ducky and Lucky. "}, 92000 );
+poem19();
+}
+
+</script>
+<script type="text/javascript">
+function poem19(){
+ 
+ 
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[3];
+    msg.pitch = 1.1
+    msg.lang = 'hi-IN'
+    msg.text = "“ It’s really a  surprise for me. Thanks, my dear friends. You all are really great ! I love you all,” said Manku. Then they all danced together.  ";
+    msg.rate = 0.7;
+    window.speechSynthesis.speak(msg);
+    
+ setTimeout(function () {document.getElementById("text15").innerHTML="“ It’s really a  surprise for me. Thanks, my dear friends. You all are really great ! I love you all,” said Manku. Then they all danced together.  " ; document.getElementById('7').style.display='block'}, 99000 );
+
+}
+
+</script>
+  </body>
+ 
+</html>
+
+
+
+
+
+
+
+
+
+
+
