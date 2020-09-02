@@ -15,11 +15,11 @@ http://sersc.org/journals/index.php/IJFGCN/article/view/17911/9078
 
 
 # Linkedin:
-https://www.linkedin.com/in/viraj-trivedi-18a0a11a0/
+https://www.linkedin.com/in/krina-shah-77471b1ab/
 
 https://www.linkedin.com/in/kajol-shah-3018891a6/
 
-https://www.linkedin.com/in/krina-shah-77471b1ab/
+https://www.linkedin.com/in/viraj-trivedi-18a0a11a0/
 
 https://www.linkedin.com/in/dhwani-patel-34a696164/
 
